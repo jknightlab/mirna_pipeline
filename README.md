@@ -1,6 +1,6 @@
 # mirna_pipeline
 --------------------------------------
-bioinformatics pipeline to analyze micro RNA sequencing data
+Bioinformatic pipeline to analyze micro RNA sequencing data
 
 ## General description
 
