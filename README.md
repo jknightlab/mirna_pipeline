@@ -39,4 +39,27 @@ mkdir $j.QC
 mv $j* $j.QC
 ```
 
+### Step 2 - alignment
+
+**Stampy**
+
+Building indices for mirna database:
+```
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py --species=human_mirna --assembly=mirbase_21 -G human_hairpin_mirna Database_for_mirna/hairpin_dna_human.fa
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py --species=human_mirna --assembly=mirbase_21 -G human_mature_mirna Database_for_mirna/mature_dna_human.fa
+```
+
+Building a hash file for mirna database:
+```
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_hairpin_mirna -H human_hairpin_mirna
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_mature_mirna -H human_mature_mirna
+```
+
+Running the alignment:
+```
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_hairpin_mirna -h human_hairpin_mirna -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.hairpin.sam
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_mature_mirna  -h human_mature_mirna  -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.mature.sam
+```
+
+
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
