@@ -20,7 +20,7 @@ of microRNAs common for both samples.
 - For microRNAs common for at least two samples, comparing the expression between the two conditions.
 - Extracting differentially expressed microRNAs.
 
-### Step 1 -- quality check and adjustment
+### Step 1 - quality check and adjustment
 
 Temporary code:
 
@@ -31,8 +31,10 @@ zcat $i > $j.fastq
 mkdir $j.fastqc_output
 fastqc -o $j.fastqc_output $j.fastq
 unzip $j.fastqc_output/$j*zip
-cat $j*fastqc/fastqc_data.txt  | grep Over -A 100 | grep 'Illumina\|TruSeq' | grep -P '^[A-Z]' | nl | awk '{print ">" $1 "_adapter\n" $2}' > $j.adapters.fa
-cutadapt -a file:$j.adapters.fa --minimum-length=15 --maximum-length=35 -o $j.trimmed.fastq $j.fastq
+cat $j*fastqc/fastqc_data.txt  | grep Over -A 100 | grep 'Illumina\|TruSeq' | \
+    grep -P '^[A-Z]' | nl | awk '{print ">" $1 "_adapter\n" $2}' > $j.adapters.fa
+cutadapt -a file:$j.adapters.fa --minimum-length=15 --maximum-length=35 \
+         -o $j.trimmed.fastq $j.fastq
 mkdir $j.QC
 mv $j* $j.QC
 ```
