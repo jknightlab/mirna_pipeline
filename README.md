@@ -61,5 +61,24 @@ Running the alignment:
 /apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_mature_mirna  -h human_mature_mirna  -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.mature.sam
 ```
 
+**BWA**
+
+Building index:
+```
+/apps/well/bwa/0.7.8/bwa index -a is Database_for_mirna/hairpin_dna_human.fa
+/apps/well/bwa/0.7.8/bwa index -a is Database_for_mirna/mature_dna_human.fa
+
+samtools faidx Database_for_mirna/hairpin_dna_human.fa
+samtools faidx Database_for_mirna/mature_dna_human.fa
+
+java -jar  /apps/well/picard-tools/1.111/CreateSequenceDictionary.jar REFERENCE=Database_for_mirna/hairpin_dna_human.fa OUTPUT=Database_for_mirna/hairpin_dna_human.dict
+java -jar  /apps/well/picard-tools/1.111/CreateSequenceDictionary.jar REFERENCE=Database_for_mirna/mature_dna_human.fa  OUTPUT=Database_for_mirna/mature_dna_human.dict
+```
+
+Running the alignment:
+```
+/apps/well/bwa/0.7.8/bwa aln -l 8 Database_for_mirna/hairpin_dna_human.fa QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq > Alignment/bwa/WTCHG_189135_285_1.trimmed.bwa.hairpin.sai
+/apps/well/bwa/0.7.8/bwa aln -l 8 Database_for_mirna/mature_dna_human.fa  QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq > Alignment/bwa/WTCHG_189135_285_1.trimmed.bwa.mature.sai
+```
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
