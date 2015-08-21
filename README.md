@@ -41,8 +41,10 @@ mv $j* $j.QC
 
 For two samples something probably went wrong during adapter ligation -- after
 trimming the adapters almost 90% of the reads were too short and hence discarded.
-These were samples [WTCHG_189135_292_1](http://research-pub.gene.com/gmap/genomes/hg19.tar.gz)
-and [WTCHG_189136_292_1](http://research-pub.gene.com/gmap/src/gmap-gsnap-2015-07-23.tar.gz).
+These were samples
+[WTCHG_189135_292_1](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189135_292_1.cutadapt_log.txt)
+and
+[WTCHG_189136_292_1](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189135_292_1.cutadapt_log.txt).
 
 
 ### Step 2 - alignment
