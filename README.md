@@ -89,6 +89,14 @@ Running the alignment:
 /apps/well/bowtie2/2.2.5/bowtie2 -L 8 -x hairpin_mirna.bowtie2 QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq > Alignment/bowtie2/WTCHG_189135_285_1.trimmed.bowtie2.hairpin.sam
 ```
 
+** Evaluation of the alignment results **
+
+| Aligner                      | Stampy     |
+| ---------------------------- | ---------- |
+| Reads mapped to hairpin      | 15,497     |
+| Reads not mapped to hairpin  | 4,951,457  |
+| Reads mapped to mature       | x  |
+| Reads not mapped to mature   | x  |
 
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
