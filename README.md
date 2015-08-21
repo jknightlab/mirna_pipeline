@@ -89,7 +89,7 @@ Running the alignment:
 /apps/well/bowtie2/2.2.5/bowtie2 -L 8 -x hairpin_mirna.bowtie2 QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq > Alignment/bowtie2/WTCHG_189135_285_1.trimmed.bowtie2.hairpin.sam
 ```
 
-*Evaluation of the alignment results*
+### *Evaluation of the alignment results*
 
 | Aligner                      | Stampy     |
 | ---------------------------- | ---------- |
