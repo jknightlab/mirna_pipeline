@@ -61,6 +61,13 @@ Running the alignment:
 /apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_hairpin_mirna -h human_hairpin_mirna -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.hairpin.sam
 /apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_mature_mirna  -h human_mature_mirna  -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.mature.sam
 ```
+
+Converting bwa `sai` output into `sam`:
+```
+/apps/well/bwa/0.7.8/bwa samse -f WTCHG_189135_285_1.trimmed.bwa.mature.sam ../../Database_for_mirna/mature_dna_human.fa WTCHG_189135_285_1.trimmed.bwa.mature.sai ../../QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq
+/apps/well/bwa/0.7.8/bwa samse -f WTCHG_189135_285_1.trimmed.bwa.hairpin.sam ../../Database_for_mirna/hairpin_dna_human.fa WTCHG_189135_285_1.trimmed.bwa.hairpin.sai ../../QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq
+```
+
 **bowtie**
 
 Building index:
@@ -91,12 +98,22 @@ Running the alignment:
 
 ### *Evaluation of the alignment results*
 
-| Aligner                      | Stampy     |
-| ---------------------------- | ---------- |
-| Reads mapped to hairpin      | 15,497     |
-| Reads not mapped to hairpin  | 4,951,457  |
-| Reads mapped to mature       | x  |
-| Reads not mapped to mature   | x  |
+- number of mapped reads:
+```
+samtools view -F 4 WTCHG_189135_285_1.trimmed.bowtie2.mature.bam -c
+```
+- number of unmapped reads:
+```
+samtools view -f 4 WTCHG_189135_285_1.trimmed.bowtie2.mature.bam -c
+```
 
+| Aligner                      | Stampy     | bwa       | bowtie    | bowtie2   |
+| ---------------------------- | ---------- | --------- | --------- | --------- |
+| Reads mapped to hairpin      | 15,497     | 70,123    | 80,041    | 25,592    |
+| Reads not mapped to hairpin  | 4,951,457  | 4,896,831 | 4,886,913 | 4,941,362 |
+| Reads mapped to mature       | 29,580     | 15,314    | 18,999    | 10,224    |
+| Reads not mapped to mature   | 4,937,374  | 4,951,640 | 4,947,955 | 4,956,730 |
+
+For some reason so far all tools map less tha 0.5% to any of the databases...
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
