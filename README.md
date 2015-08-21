@@ -45,8 +45,10 @@ mv $j* $j.QC
 
 Building indices for mirna database:
 ```
-/apps/well/stampy/1.0.25r3363-py2.7/stampy.py --species=human_mirna --assembly=mirbase_21 -G human_hairpin_mirna Database_for_mirna/hairpin_dna_human.fa
-/apps/well/stampy/1.0.25r3363-py2.7/stampy.py --species=human_mirna --assembly=mirbase_21 -G human_mature_mirna Database_for_mirna/mature_dna_human.fa
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py --species=human_mirna --assembly=mirbase_21 \
+    -G human_hairpin_mirna Database_for_mirna/hairpin_dna_human.fa
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py --species=human_mirna --assembly=mirbase_21 \ 
+    -G human_mature_mirna Database_for_mirna/mature_dna_human.fa
 ```
 **BWA**
 
@@ -58,14 +60,22 @@ Building a hash file for mirna database:
 
 Running the alignment:
 ```
-/apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_hairpin_mirna -h human_hairpin_mirna -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.hairpin.sam
-/apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_mature_mirna  -h human_mature_mirna  -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.mature.sam
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_hairpin_mirna \
+    -h human_hairpin_mirna -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq
+    -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.hairpin.sam
+/apps/well/stampy/1.0.25r3363-py2.7/stampy.py -g human_mature_mirna  \
+    -h human_mature_mirna  -M QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq \
+    -o Alignment/Stampy/WTCHG_189135_285_1.trimmed.stampy.mature.sam
 ```
 
 Converting bwa `sai` output into `sam`:
 ```
-/apps/well/bwa/0.7.8/bwa samse -f WTCHG_189135_285_1.trimmed.bwa.mature.sam ../../Database_for_mirna/mature_dna_human.fa WTCHG_189135_285_1.trimmed.bwa.mature.sai ../../QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq
-/apps/well/bwa/0.7.8/bwa samse -f WTCHG_189135_285_1.trimmed.bwa.hairpin.sam ../../Database_for_mirna/hairpin_dna_human.fa WTCHG_189135_285_1.trimmed.bwa.hairpin.sai ../../QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq
+/apps/well/bwa/0.7.8/bwa samse -f WTCHG_189135_285_1.trimmed.bwa.mature.sam \
+../../Database_for_mirna/mature_dna_human.fa WTCHG_189135_285_1.trimmed.bwa.mature.sai \
+../../QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq
+/apps/well/bwa/0.7.8/bwa samse -f WTCHG_189135_285_1.trimmed.bwa.hairpin.sam \
+../../Database_for_mirna/hairpin_dna_human.fa WTCHG_189135_285_1.trimmed.bwa.hairpin.sai \
+../../QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq
 ```
 
 **bowtie**
