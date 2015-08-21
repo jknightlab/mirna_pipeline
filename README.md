@@ -88,8 +88,12 @@ Building index:
 
 Running the alignment:
 ```
-/apps/well/bowtie/1.0.1/bowtie -l 8 mature_mirna  QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq > Alignment/bowtie/WTCHG_189135_285_1.trimmed.bowtie.mature.sam
-/apps/well/bowtie/1.0.1/bowtie -l 8 hairpin_mirna QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq > Alignment/bowtie/WTCHG_189135_285_1.trimmed.bowtie.hairpin.sam
+/apps/well/bowtie/1.0.1/bowtie -l 8 mature_mirna  \
+    QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq \
+    > Alignment/bowtie/WTCHG_189135_285_1.trimmed.bowtie.mature.sam
+/apps/well/bowtie/1.0.1/bowtie -l 8 hairpin_mirna \
+    QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq \
+    > Alignment/bowtie/WTCHG_189135_285_1.trimmed.bowtie.hairpin.sam
 ```
 
 **bowtie2**
@@ -102,8 +106,12 @@ Building index:
 
 Running the alignment:
 ```
-/apps/well/bowtie2/2.2.5/bowtie2 -L 8 -x mature_mirna.bowtie2  QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq > Alignment/bowtie2/WTCHG_189135_285_1.trimmed.bowtie2.mature.sam
-/apps/well/bowtie2/2.2.5/bowtie2 -L 8 -x hairpin_mirna.bowtie2 QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq > Alignment/bowtie2/WTCHG_189135_285_1.trimmed.bowtie2.hairpin.sam
+/apps/well/bowtie2/2.2.5/bowtie2 -L 8 -x mature_mirna.bowtie2 \
+    QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq \
+    > Alignment/bowtie2/WTCHG_189135_285_1.trimmed.bowtie2.mature.sam
+/apps/well/bowtie2/2.2.5/bowtie2 -L 8 -x hairpin_mirna.bowtie2 \
+    QC/WTCHG_189135_285_1.QC/WTCHG_189135_285_1.trimmed.fastq \
+    > Alignment/bowtie2/WTCHG_189135_285_1.trimmed.bowtie2.hairpin.sam
 ```
 
 ### *Evaluation of the alignment results*
