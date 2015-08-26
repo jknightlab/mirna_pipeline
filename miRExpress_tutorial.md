@@ -22,7 +22,8 @@ Raw_data_parse -i test.fastq
 
 statistics_reads -i test.fastq.merge
 
-alignmentSIMD -r /well/jknight/Irina/Programs/miRExpress/data_miRBase_19/hsa_precursor.txt -i test.fastq.merge -o alignment_results/
+alignmentSIMD -r /well/jknight/Irina/Programs/miRExpress/data_miRBase_19/hsa_precursor.txt \
+    -i test.fastq.merge -o alignment_results/
 ```
 
 The alignment results file doesn't exist. Assuming it happens because none of my reads
