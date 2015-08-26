@@ -8,30 +8,15 @@ To run the bioinformatic analysis of microRNA NGS data described
 [here](https://github.com/jknightlab/mirna_pipeline/edit/master/README.md),
 I tried the [miRExpress](http://mirexpress.mbc.nctu.edu.tw/usage.php) tool.
 
-## Tutorial
+### Tutorial
 
 All tools are situated in `/well/jknight/Irina/Programs/miRExpress/src/Raw_data_parse`.
 
-Everything here was performed on a small test subset of 2500 reads:
+Everything here was performed on a small test subset of 2500 reads (pre-trimmed, as the
+trimming step didn't work):
 
 ```
-head -10000 /well/jknight/Irina/QC/WTCHG_189135_275_1.QC/WTCHG_189135_275_1.fastq > test.fastq
-```
-### Statistics on raw reads
-
-```
-Raw_data_parse -i test.fastq
-```
-
-Creates a `test.fastq.merge` file with statistics of how many sequences were found how many times.
-
-### Trimming adapters
-
-This step doesn't work. I simply took the trimmed fastq file generated before to
-proceed with the analysis.
-
-```
-head -10000 ../QC/WTCHG_189135_275_1.QC/WTCHG_189135_275_1.trimmed.fastq > test_trimmed.fastq
+head -10000 ../QC/WTCHG_189135_275_1.QC/WTCHG_189135_275_1.trimmed.fastq > test.fastq
 
 Raw_data_parse -i test.fastq
 
