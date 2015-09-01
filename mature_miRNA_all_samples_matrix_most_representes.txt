@@ -1,0 +1,43 @@
+Sample_name	sample_nature	Bos taurus (cow)	Equus caballus (horse)	gallus gallus (chicken)	Homo sapience	Monodelphis domestica (opossum)	mus musculus (mouse)	Nematostella vectensis (sea anemone)	Oryza sativa (rice)	Pongo pygmaeus (orangutan)	Taeniopygia guttata (bird)
+WTCHG_189135_274_1.trimmed.bowtie_against_all_mature.sam	HC1	129	99	174	790	98	546	645	186	111	75
+WTCHG_189135_275_1.trimmed.bowtie_against_all_mature.sam	HC1	284	158	244	1239	124	570	509	252	155	96
+WTCHG_189135_276_1.trimmed.bowtie_against_all_mature.sam	HC2	178	135	176	1182	95	605	286	194	136	2577
+WTCHG_189135_277_1.trimmed.bowtie_against_all_mature.sam	HC2	203	121	172	774	88	488	360	111	86	1930
+WTCHG_189135_278_1.trimmed.bowtie_against_all_mature.sam	HC3	406	183	199	984	118	777	241	144	94	3397
+WTCHG_189135_279_1.trimmed.bowtie_against_all_mature.sam	HC3	241	204	391	1451	182	936	362	306	186	3448
+WTCHG_189135_280_1.trimmed.bowtie_against_all_mature.sam	HC4	283	132	109	1121	105	550	883	129	112	2644
+WTCHG_189135_281_1.trimmed.bowtie_against_all_mature.sam	HC4	389	355	524	2666	396	1403	1353	407	439	6762
+WTCHG_189135_282_1.trimmed.bowtie_against_all_mature.sam	AS1	519	415	531	3488	311	1650	1814	515	358	9576
+WTCHG_189135_283_1.trimmed.bowtie_against_all_mature.sam	AS1	379	412	419	1976	322	1264	965	381	248	3502
+WTCHG_189135_284_1.trimmed.bowtie_against_all_mature.sam	AS2	297	255	363	1299	270	978	629	296	207	1740
+WTCHG_189135_285_1.trimmed.bowtie_against_all_mature.sam	AS2	846	575	944	2745	758	2452	324	772	534	555
+WTCHG_189135_286_1.trimmed.bowtie_against_all_mature.sam	AS3	520	330	415	1800	276	1681	241	347	262	2607
+WTCHG_189135_288_1.trimmed.bowtie_against_all_mature.sam	AS4	271	191	221	1026	183	799	510	235	176	1612
+WTCHG_189135_289_1.trimmed.bowtie_against_all_mature.sam	AS4	622	555	750	2645	619	1968	448	625	481	1117
+WTCHG_189135_290_1.trimmed.bowtie_against_all_mature.sam	AD35	49	53	55	398	36	369	27	51	30	523
+WTCHG_189135_291_1.trimmed.bowtie_against_all_mature.sam	AD35	379	145	173	858	75	788	379	188	261	4467
+WTCHG_189135_292_1.trimmed.bowtie_against_all_mature.sam	AD48	0	6	20	6	8	0	0	0	2	2
+WTCHG_189135_293_1.trimmed.bowtie_against_all_mature.sam	AD48	207	83	100	513	51	434	183	78	157	2514
+WTCHG_189136_274_1.trimmed.bowtie_against_all_mature.sam	HC1	124	86	192	871	97	540	613	177	114	77
+WTCHG_189136_275_1.trimmed.bowtie_against_all_mature.sam	HC1	310	182	256	1241	166	634	491	257	134	98
+WTCHG_189136_276_1.trimmed.bowtie_against_all_mature.sam	HC2	227	147	179	1257	78	579	286	186	128	2576
+WTCHG_189136_277_1.trimmed.bowtie_against_all_mature.sam	HC2	203	115	178	838	92	529	375	125	91	1917
+WTCHG_189136_278_1.trimmed.bowtie_against_all_mature.sam	HC3	435	191	195	942	108	809	249	139	103	3373
+WTCHG_189136_279_1.trimmed.bowtie_against_all_mature.sam	HC3	247	200	376	1545	204	978	391	315	182	3563
+WTCHG_189136_280_1.trimmed.bowtie_against_all_mature.sam	HC4	288	110	117	1156	125	551	795	142	80	2799
+WTCHG_189136_281_1.trimmed.bowtie_against_all_mature.sam	HC4	407	398	542	2606	392	1351	1384	452	448	6746
+WTCHG_189136_282_1.trimmed.bowtie_against_all_mature.sam	AS1	508	431	622	3574	303	1658	1821	566	357	9849
+WTCHG_189136_283_1.trimmed.bowtie_against_all_mature.sam	AS1	437	426	513	2140	315	1263	991	368	240	3577
+WTCHG_189136_284_1.trimmed.bowtie_against_all_mature.sam	AS2	284	298	417	1320	283	952	635	315	220	1735
+WTCHG_189136_285_1.trimmed.bowtie_against_all_mature.sam	AS2	788	636	975	2843	799	2590	353	848	551	586
+WTCHG_189136_286_1.trimmed.bowtie_against_all_mature.sam	AS3	536	289	473	1864	280	1710	236	311	287	2663
+WTCHG_189136_288_1.trimmed.bowtie_against_all_mature.sam	AS4	271	193	234	1054	179	764	503	239	203	1550
+WTCHG_189136_289_1.trimmed.bowtie_against_all_mature.sam	AS4	637	572	761	2511	596	2052	497	626	478	1103
+WTCHG_189136_290_1.trimmed.bowtie_against_all_mature.sam	AD35	53	47	56	407	31	353	20	55	14	525
+WTCHG_189136_291_1.trimmed.bowtie_against_all_mature.sam	AD35	336	144	173	960	88	792	359	187	262	4562
+WTCHG_189136_292_1.trimmed.bowtie_against_all_mature.sam	AD48	0	3	22	12	5	1	0	0	0	0
+WTCHG_189136_293_1.trimmed.bowtie_against_all_mature.sam	AD48	234	90	103	551	40	447	199	102	124	2624
+organism name	NA	bta	eca	gga	hsa	mdo	mmu	nve	osa	ppy	tgu
+sums	NA	12527	8965	12364	54653	8296	36811	20357	10627	8051	99067
+		Bos taurus (cow)	Equus caballus (horse)	gallus gallus (chicken)	Homo sapience	Monodelphis domestica (opossum)	mus musculus (mouse)	Nematostella vectensis (sea anemone)	Oryza sativa (rice)	Pongo pygmaeus (orangutan)	Taeniopygia guttata (bird)
+
