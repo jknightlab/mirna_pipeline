@@ -6,7 +6,7 @@ Bioinformatic pipeline to analyze micro RNA sequencing data
 
 
 
-![alt text][https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_distr.png]
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_distr.png)
 
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
