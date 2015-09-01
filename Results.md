@@ -14,6 +14,11 @@ to the full database of microRNAs from all organisms using `bowtie`.
 
 Legend for both bar graphs:
 
+<img src="https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_legend.png" width="300">
+
+Now a hred:
+
+
 <a href="url"><img src="https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_legend.png" align="left" height="250" width="300" ></a>
 <br>
 
