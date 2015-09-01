@@ -16,12 +16,6 @@ Legend for both bar graphs:
 
 <img src="https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_legend.png" width="300">
 
-Now a hred:
-
-
-<a href="url"><img src="https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_legend.png" align="left" height="250" width="300" ></a>
-<br>
-
 Only a minority of reads was mapped to any known microRNAs (about **0.5%** per sample on average).
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
