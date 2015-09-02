@@ -33,7 +33,7 @@ Numbers of reads mapped to hairpin microRNAs from known species:
 Only a minority of reads was mapped to any known microRNAs (about **2.75%** per sample on average).
 
 | number of mapped reads | percent of mapped reads |
-a| ---------------------- | ----------------------- |
+| ---------------------- | ----------------------- |
 | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/hairpin_miRNA_all_samples_numbers.png) | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/hairpin_miRNA_all_samples_distr.png) |
 
 Legend for both bar graphs:
