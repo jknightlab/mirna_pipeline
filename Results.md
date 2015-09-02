@@ -14,19 +14,19 @@ Numbers of reads mapped to microRNAs from known species:
 
 **Mapping against mature microRNA**
 
+Only a minority of reads was mapped to any known microRNAs (about **0.5%** per sample on average).
 
-
+| number of mapped reads | percent of mapped reads |
+| ---------------------- | ----------------------- |
+| ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_numbers.png) | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_distr.png) |
 
 Legend for both bar graphs:
 
-<img src="https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_legend.png" width="300">
-
-Only a minority of reads was mapped to any known microRNAs (about **0.5%** per sample on average).
+<img src="https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_legend.png" width="200">
 
 
-| Aligner                      | Stampy     | bwa       |
-| ---------------------------- | ---------- | --------- |
-| Reads mapped to hairpin      | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_numbers.png) | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_distr.png) |
+
+
 
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
