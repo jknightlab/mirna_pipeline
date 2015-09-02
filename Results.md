@@ -4,10 +4,19 @@ Bioinformatic pipeline to analyze micro RNA sequencing data
 
 ## Results of the analysis
 
-Mapping all reads (trimmed, containing no adapters and adequate sequence length)
-to the full database of microRNAs from all organisms using `bowtie`.
+**Mapping against the human genome**
+
+-> Results from sequencing core: on average less than *1%* was mapped.
+
+-> Results of my alignment: after trimming the adapters and removing too short
+and too long reads, *87%* of reads was mapped to the human genome with `bowtie`
+on average.
+
 
 **Mapping against mature microRNA**
+
+Mapping all reads (trimmed, containing no adapters and adequate sequence length)
+to the full database of microRNAs from all organisms using `bowtie`.
 
 Numbers of reads mapped to microRNAs from known species:
 - [all species](https://github.com/jknightlab/mirna_pipeline/blob/master/mature_miRNA_all_samples_matrix_all.txt)
