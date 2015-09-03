@@ -19,7 +19,7 @@ location.
 | Examples of some genes from chr1 |
 | -------------------------------- |
 | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/example_dcaf6.png) |
-| -------------------------------- |
+| |
 | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/example_lmna.png) |
 
 
