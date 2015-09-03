@@ -16,8 +16,12 @@ Even though a lot of reads mapped perfectly and uniquely, when looking at the co
 distribution, it looks pretty random; in fact, a lot of reads are mapped to to the same
 location.
 
-![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/example_dcaf6.png)
-![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/example_lmna.png)
+| Examples of some genes from chr1 |
+| -------------------------------- |
+| ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/example_dcaf6.png) |
+| -------------------------------- |
+| ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/example_lmna.png) |
+
 
 After removing potential PCR duplicates with `samtools rmdup`, only *15%* of reads are left.
 
