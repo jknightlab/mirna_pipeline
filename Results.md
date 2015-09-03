@@ -10,7 +10,16 @@ Bioinformatic pipeline to analyze micro RNA sequencing data
 
 -> Results of my alignment: after trimming the adapters and removing too short
 and too long reads, *87%* of reads was mapped to the human genome with `bowtie`
-on average.
+on average. `bowtie` does not split reads, so this is considered as DNA alignment.
+
+Even though a lot of reads mapped perfectly and uniquely, when looking at the coverage
+distribution, it looks pretty random; in fact, a lot of reads are mapped to to the same
+location.
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/example_dcaf6.png)
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/example_lmna.png)
+
+After removing potential PCR duplicates with `samtools rmdup`, only *15%* of reads are left.
 
 
 **Mapping against mature microRNA**
