@@ -25,6 +25,18 @@ location.
 
 After removing potential PCR duplicates with `samtools rmdup`, only *15%* of reads are left.
 
+**Mapping against human non-coding RNAs**
+
+Mapping all reads (trimmed, containing no adapters and adequate sequence length)
+to the database containing human [noncoding RNAs](http://www.noncode.org/index.php).
+Unfortunately the database does not provide good annotation (what type of ncRNAs it
+contains), the entries are named `NONHSAT000009` and similarly. However, mainly the
+database contains *long noncoding RNAs*.
+
+On average for all analyzed samples around *78%* of reads were mapped without mismatches.
+
+
+
 
 **Mapping against mature microRNA**
 
