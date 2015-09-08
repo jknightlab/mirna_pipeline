@@ -18,21 +18,21 @@ This matrix was used as an input file for `DESeq` -- the tool used to generate
 lists of differentially expressed miRNAs.
 
 | Sample name | Sample type |
-| ----------- | ----------- |
+|             |             |
 | 275         | HC1-Th17    |
 | 277         | HC2-Th17    |
 | 279         | HC3-Th17    |
 | 281         | HC4-Th17    |
-| ----------- | ----------- |
+|             |             |
 | 276         | HC2-nonTh17 |
 | 278         | HC3-nonTh17 |
 | 280         | HC4-nonTh17 |
-| ----------- | ----------- |
+|             |             |
 | 282         | AS1-nonTh17 |
 | 284         | AS2-nonTh17 |
 | 286         | AS3-nonTh17 |
 | 288         | AS4-nonTh17 |
-| ----------- | ----------- |
+|             |             |
 | 283         | AS1-Th17    |
 | 285         | AS2-Th17    |
 
@@ -102,7 +102,7 @@ The following comparisons have been performed:
 
 - [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_AS_Th17_VS_AS_nonTh17.txt)
 
-- [HC vs AS] (all HC vs all AS)(https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_VS_AS.pooled.txt)
+- [HC vs AS](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_VS_AS.pooled.txt) (all HC vs all AS)
 
 
 More code (for all comparisons listed above):
