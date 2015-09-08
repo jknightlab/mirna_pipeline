@@ -18,7 +18,7 @@ This matrix was used as an input file for `DESeq` -- the tool used to generate
 lists of differentially expressed miRNAs.
 
 | Sample name | Sample type |
-|             |             |
+| ----------- | ----------- |
 | 275         | HC1-Th17    |
 | 277         | HC2-Th17    |
 | 279         | HC3-Th17    |
