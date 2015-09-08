@@ -129,6 +129,28 @@ cds <- estimateDispersions(cds)
 res <- nbinomTest(cds, "HC", "AS")
 write.table(res, file="diff_expression_HC_VS_AS.pooled.txt", quote=FALSE, sep="\t", row.names=FALSE)
 ```
+## Differential expression analysis on high counts only
+
+| Sample | Number of reads mapped to miRNAs |
+| ------ | -------------------------------- |
+| HC1-Th17    |    86,821 |
+| HC2-nonTh17 |   995,035 |
+| HC2-Th17    |   955,892 |
+| HC3-nonTh17 |   677,173 |
+| HC3-Th17    |   926,892 |
+| HC4-nonTh17 |   450,159 |
+| HC4-Th17    |   153,514 |
+| AS1-nonTh17 | 1,188,284 |
+| AS1-Th17    |   574,407 |
+| AS2-nonTh17 |   298,505 |
+| AS2-Th17    |    10,110 |
+| AS3-nonTh17	|   665,606 |
+| AS4-nonTh17 | 1,305,340 |
+
+Excluding samples *HC1-Th17* and *AS2-Th17* from the
+analysis, as they contains too few reads. Unfortunately
+this analysis also did not produce any significant
+difference in microRNA expression across conditions.
 
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
