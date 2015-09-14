@@ -92,7 +92,7 @@ expression (tool [DESeq](https://bioconductor.org/packages/release/bioc/html/DES
 
 An example report of quality checks on initial `fastq`
 files for the sample AS2-Th17 can be found
-[here](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1_fastqc.html).
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1_fastqc.txt).
 From the report we can see that the following checks failed:
 - per base sequence content: this is expected, as the tool was
 initially designed to work with whole genome reads. MicroRNAs
@@ -116,7 +116,7 @@ discarded.
 
 An example report of quality checks on trimmed `fastq`
 files for the sample AS2-Th17 can be found
-[here](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1.trimmed_fastqc.html).
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1_fastqc.trimmed.txt).
 We can see that only sequence duplication level (and for some
 files -- per nucleotide sequence content) still fail -- as
 expected (see above). Note that reads which are too short or
