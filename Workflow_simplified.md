@@ -147,6 +147,39 @@ sufficient for the downstream analysis.
 
 **Aligning reads to the database of human microRNAs**
 
+Question for the core: **Hc4 th17 40.9 49.08** ???
+
+This table contains numbers of reads mapped to miRNAs.
+
+| Sample type | File name1 | Number of mapped reads |  File name2 | Number of mapped reads | RNA |
+| ----------- | ---------- | ---------------------- | ----------- | ---------------------- | --- |
+| <sub>HC1-nonTh17</sub> | <sub>WTCHG_189135_274</sub> | <sub>17,714</sub> | <sub>WTCHG_189136_274</sub> | <sub>18,437</sub> | <sub>90.83</sub> |
+| <sub>HC2-nonTh17</sub> | <sub>WTCHG_189135_276</sub> | <sub>2,269</sub>  | <sub>WTCHG_189136_276</sub> | <sub>2,491</sub>  | <sub>100.00</sub>|
+| <sub>HC3-nonTh17</sub> | <sub>WTCHG_189135_278</sub> | <sub>6,534</sub>  | <sub>WTCHG_189136_278</sub> | <sub>6,771</sub>  | <sub>100.00</sub>|
+| <sub>HC4-nonTh17</sub> | <sub>WTCHG_189135_280</sub> | <sub>2,125</sub>  | <sub>WTCHG_189136_280</sub> | <sub>2,216</sub>  | <sub>100.00</sub>|
+|                        |                             |                   |                             |                   |                  |
+| <sub>HC1-Th17</sub>    | <sub>WTCHG_189135_275</sub> | <sub>2,417</sub>  | <sub>WTCHG_189136_275</sub> | <sub>2,425</sub>  | <sub>85.03</sub> |
+| <sub>HC2-Th17</sub>    | <sub>WTCHG_189135_277</sub> | <sub>1,633</sub>  | <sub>WTCHG_189136_277</sub> | <sub>1,666</sub>  | <sub>69.76</sub> |
+| <sub>HC3-Th17</sub>    | <sub>WTCHG_189135_279</sub> | <sub>1,212</sub>  | <sub>WTCHG_189136_279</sub> | <sub>1,265</sub>  | <sub>74.42</sub> |
+| <sub>HC4-Th17</sub>    | <sub>WTCHG_189135_281</sub> | <sub>5,717</sub>  | <sub>WTCHG_189136_281</sub> | <sub>5,940</sub>  | <sub>49.08</sub> |
+|                        |                             |                   |                             |                   |                  |
+| <sub>AS1-nonTh17</sub> | <sub>WTCHG_189135_282</sub> | <sub>97,491</sub> | <sub>WTCHG_189136_282</sub> | <sub>101,344</sub>| <sub>100.00</sub>|
+| <sub>AS2-nonTh17</sub> | <sub>WTCHG_189135_284</sub> | <sub>464</sub>    | <sub>WTCHG_189136_284</sub> | <sub>481</sub>    | <sub>36.46</sub> |
+| <sub>AS3-nonTh17</sub> | <sub>WTCHG_189135_286</sub> | <sub>487</sub>    | <sub>WTCHG_189136_286</sub> | <sub>524</sub>    | <sub>46.10</sub> |
+| <sub>AS4-nonTh17</sub> | <sub>WTCHG_189135_288</sub> | <sub>1,245</sub>  | <sub>WTCHG_189136_288</sub> | <sub>1,353</sub>  | <sub>77.02</sub> |
+|                        |                             |                   |                             |                   |                  |
+| <sub>AS1-Th17</sub>    | <sub>WTCHG_189135_283</sub> | <sub>732</sub>    | <sub>WTCHG_189136_283</sub> | <sub>729</sub>    | <sub>43.61</sub> |
+| <sub>AS2-Th17</sub>    | <sub>WTCHG_189135_285</sub> | <sub>16</sub>     | <sub>WTCHG_189136_285</sub> | <sub>17</sub>     | <sub>33.27</sub> |
+| <sub>AS4-Th17</sub>    | <sub>WTCHG_189135_289</sub> | <sub>776</sub>    | <sub>WTCHG_189136_289</sub> | <sub>771</sub>    | <sub>37.87</sub> |
+
+Correlation between to sequencing runs is **0.99**. Correlation
+between number of mapped reads and the amount of RNA input
+material is **0.39**.
+
+[Here](https://github.com/jknightlab/mirna_pipeline/blob/master/Alignment_process.md)
+you can see how the aligner was chosen and all bioinformatic
+details including commands.
+
 **Checking alignment quality**
 **Extracting reads mapped to miRNAs**
 **Differential miRNA expression analysis**
