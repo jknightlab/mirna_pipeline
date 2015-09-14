@@ -123,7 +123,7 @@ information on the number of reads before and after cleaning.
 
 | Sample type | File name1       | Before trim| After trim | File name2       | Before trim| After trim |
 | ----------- | ---------------- | ---------- | ---------- | ---------------- | ---------- | ---------- |
-| <sub>HC1-nonTh17</sub> | WTCHG_189135_274 | 16,658,312 | 10,307,964 | WTCHG_189136_274 | 17,111,904 | 10,735,176 |
+| <sub>HC1-nonTh17</sub> | <sub>WTCHG_189135_274</sub> | <sub>16,658,312</sub> | <sub>10,307,964</sub> | <sub>WTCHG_189136_274</sub> | <sub>17,111,904</sub> | <sub>10,735,176</sub> |
 | HC2-nonTh17 | WTCHG_189135_276 | 23,180,836 | 12,294,948 | WTCHG_189136_276 | 23,817,544 | 12,692,556 | 
 | HC3-nonTh17 | WTCHG_189135_278 | 28,641,100 | 14,340,808 | WTCHG_189136_278 | 29,263,204 | 14,677,208 |
 | HC4-nonTh17 | WTCHG_189135_280 | 27,021,828 | 14,380,188 | WTCHG_189136_280 | 27,634,528 | 14,715,880 |
