@@ -142,6 +142,8 @@ information on the number of reads before and after cleaning.
 | AS2-Th17    | WTCHG_189135_285 | 23,164,272 | 19,867,816 | WTCHG_189136_285 | 23,761,664 | 20,393,544 |
 | AS4-Th17    | WTCHG_189135_289 | 39,985,232 | 30,642,800 | WTCHG_189136_289 | 41,047,460 | 31,462,132 |
 
+| Sample type | File name1       | Before trim| After trim | File name2       | Before trim| After trim |
+| ----------- | ---------------- | ---------- | ---------- | ---------------- | ---------- | ---------- |
 | <sub>HC1-nonTh17</sub> | <sub>WTCHG_189135_274</sub> | <sub>16,658,312</sub> | <sub>10,307,964</sub> | <sub>WTCHG_189136_274</sub> | <sub>17,111,904</sub> | <sub>10,735,176</sub> |
 | <sub>HC2-nonTh17</sub> | <sub>WTCHG_189135_276</sub> | <sub>23,180,836</sub> | <sub>12,294,948</sub> | <sub>WTCHG_189136_276</sub> | <sub>23,817,544</sub> | <sub>12,692,556</sub> |
 | <sub>HC3-nonTh17</sub> | <sub>WTCHG_189135_278</sub> | <sub>28,641,100</sub> | <sub>14,340,808</sub> | <sub>WTCHG_189136_278</sub> | <sub>29,263,204</sub> | <sub>14,677,208</sub> |
