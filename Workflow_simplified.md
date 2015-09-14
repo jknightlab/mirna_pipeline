@@ -88,7 +88,8 @@ expression (tool [DESeq](https://bioconductor.org/packages/release/bioc/html/DES
 
 ### Analysis workflow
 
-*Checking quality control on initial fastq files*
+**Checking quality control on initial fastq files**
+
 An example report of quality checks on initial `fastq`
 files for the sample AS2-Th17 can be found
 [here](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1_fastqc.html).
@@ -105,12 +106,14 @@ be highly represented.
 because the Sequencing Core has not trimmed Illumina sequencing
 adapters after sequencing. We will remove these adapters.
 
-*Cleaning the fastq files*
+**Cleaning the fastq files**
+
 Identified adapters were removed from the 5' end of reads,
 reads shorter than 15 or longer than 35 nucleotides were
 discarded.
 
-*Checking quality control on trimmed fastq files*
+**Checking quality control on trimmed fastq files**
+
 An example report of quality checks on trimmed `fastq`
 files for the sample AS2-Th17 can be found
 [here](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1.trimmed_fastqc.html).
@@ -142,7 +145,11 @@ information on the number of reads before and after cleaning.
 After trimming and discarding reads, all samples have number of reads
 sufficient for the downstream analysis.
 
+**Aligning reads to the database of human microRNAs**
 
+**Checking alignment quality**
+**Extracting reads mapped to miRNAs**
+**Differential miRNA expression analysis**
 
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
