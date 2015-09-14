@@ -52,6 +52,8 @@ for healthy controls.
 | AS4-Th17    | WTCHG_189135_289, WTCHG_189136_289 |
 
 
+<FONT COLOR="######">text text text text text</FONT>
+
 ```html
    // code for coloring
    <FONT COLOR="######">text text text text text</FONT>
