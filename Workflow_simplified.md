@@ -92,6 +92,10 @@ expression (tool [DESeq](https://bioconductor.org/packages/release/bioc/html/DES
 
 An example report of quality checks on initial `fastq`
 files for the sample AS2-Th17 can be found
+
+<a href="https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1_fastqc.html">link text</a>
+
+
 [here](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1_fastqc.html).
 From the report we can see that the following checks failed:
 - per base sequence content: this is expected, as the tool was
