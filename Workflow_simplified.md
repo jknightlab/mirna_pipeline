@@ -123,7 +123,7 @@ information on the number of reads before and after cleaning.
 
 | Sample type | File name1       | Before trim| After trim | File name2       | Before trim| After trim |
 | ----------- | ---------------- | ---------- | ---------- | ---------------- | ---------- | ---------- |
-| HC1-nonTh17 | <sub>WTCHG_189135_274</sub> | 16,658,312 | 10,307,964 | WTCHG_189136_274 | 17,111,904 | 10,735,176 |
+| HC1-nonTh17 | WTCHG_189135_274 | 16,658,312 | 10,307,964 | WTCHG_189136_274 | 17,111,904 | 10,735,176 |
 | HC2-nonTh17 | WTCHG_189135_276 | 23,180,836 | 12,294,948 | WTCHG_189136_276 | 23,817,544 | 12,692,556 | 
 | HC3-nonTh17 | WTCHG_189135_278 | 28,641,100 | 14,340,808 | WTCHG_189136_278 | 29,263,204 | 14,677,208 |
 | HC4-nonTh17 | WTCHG_189135_280 | 27,021,828 | 14,380,188 | WTCHG_189136_280 | 27,634,528 | 14,715,880 |
@@ -142,6 +142,21 @@ information on the number of reads before and after cleaning.
 | AS2-Th17    | WTCHG_189135_285 | 23,164,272 | 19,867,816 | WTCHG_189136_285 | 23,761,664 | 20,393,544 |
 | AS4-Th17    | WTCHG_189135_289 | 39,985,232 | 30,642,800 | WTCHG_189136_289 | 41,047,460 | 31,462,132 |
 
+| <sub>HC1-nonTh17</sub> | <sub>WTCHG_189135_274</sub> | <sub>16,658,312</sub> | <sub>10,307,964</sub> | <sub>WTCHG_189136_274</sub> | <sub>17,111,904</sub> | <sub>10,735,176</sub> |
+| <sub>HC2-nonTh17</sub> | <sub>WTCHG_189135_276</sub> | <sub>23,180,836</sub> | <sub>12,294,948</sub> | <sub>WTCHG_189136_276</sub> | <sub>23,817,544</sub> | <sub>12,692,556</sub> |
+| <sub>HC3-nonTh17</sub> | <sub>WTCHG_189135_278</sub> | <sub>28,641,100</sub> | <sub>14,340,808</sub> | <sub>WTCHG_189136_278</sub> | <sub>29,263,204</sub> | <sub>14,677,208</sub> |
+| <sub>HC4-nonTh17</sub> | <sub>WTCHG_189135_280</sub> | <sub>27,021,828</sub> | <sub>14,380,188</sub> | <sub>WTCHG_189136_280</sub> | <sub>27,634,528</sub> | <sub>14,715,880</sub> |
+| <sub>HC1-Th17</sub> | <sub>WTCHG_189135_275</sub> | <sub>18,712,164</sub> | <sub>11,088,016</sub> | <sub>WTCHG_189136_275</sub> | <sub>19,226,884</sub> | <sub>11,487,684</sub> |
+| <sub>HC2-Th17</sub> | <sub>WTCHG_189135_277</sub> | <sub>25,634,288</sub> | <sub>12,997,776</sub> | <sub>WTCHG_189136_277</sub> | <sub>26,178,792</sub> | <sub>13,286,152</sub> |
+| <sub>HC3-Th17</sub> | <sub>WTCHG_189135_279</sub> | <sub>24,934,788</sub> | <sub>12,534,560</sub> | <sub>WTCHG_189136_279</sub> | <sub>25,451,552</sub> | <sub>12,808,388</sub> |
+| <sub>HC4-Th17</sub> | <sub>WTCHG_189135_281</sub> | <sub>36,458,196</sub> | <sub>20,089,092</sub> | <sub>WTCHG_189136_281</sub> | <sub>37,117,612</sub> | <sub>20,519,576</sub> |
+| <sub>AS1-nonTh17</sub> | <sub>WTCHG_189135_282</sub> | <sub>77,242,220</sub> | <sub>43,030,708</sub> | <sub>WTCHG_189136_282</sub> | <sub>79,433,628</sub> | <sub>44,313,332</sub> |
+| <sub>AS2-nonTh17</sub> | <sub>WTCHG_189135_284</sub> | <sub>20,299,204</sub> | <sub>13,918,564</sub> | <sub>WTCHG_189136_284</sub> | <sub>20,800,688</sub> | <sub>14,275,212</sub> |
+| <sub>AS3-nonTh17</sub> | <sub>WTCHG_189135_286</sub> | <sub>23,372,832</sub> | <sub>14,729,640</sub> | <sub>WTCHG_189136_286</sub> | <sub>23,979,804</sub> | <sub>15,319,740</sub> |
+| <sub>AS4-nonTh17</sub> | <sub>WTCHG_189135_288</sub> | <sub>31,656,996</sub> | <sub>16,691,080</sub> | <sub>WTCHG_189136_288</sub> | <sub>32,283,960</sub> | <sub>17,033,808</sub> |
+| <sub>AS1-Th17</sub> | <sub>WTCHG_189135_283</sub> | <sub>30,916,908</sub> | <sub>16,576,272</sub> | <sub>WTCHG_189136_283</sub> | <sub>31,723,492</sub> | <sub>17,048,232</sub> |
+| <sub>AS2-Th17</sub> | <sub>WTCHG_189135_285</sub> | <sub>23,164,272</sub> | <sub>19,867,816</sub> | <sub>WTCHG_189136_285</sub> | <sub>23,761,664</sub> | <sub>20,393,544</sub> |
+| <sub>AS4-Th17</sub> | <sub>WTCHG_189135_289</sub> | <sub>39,985,232</sub> | <sub>30,642,800</sub> | <sub>WTCHG_189136_289</sub> | <sub>41,047,460</sub> | <sub>31,462,132</sub> |
 
 
 
