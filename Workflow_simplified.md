@@ -176,12 +176,22 @@ Correlation between to sequencing runs is **0.99**. Correlation
 between number of mapped reads and the amount of RNA input
 material is **0.39**.
 
+!!!!!!!!!!!!!!! The numbers -- sequencing results from the core, bam files --
+and the expression data -- do not add up!!!!!!!!!!!
+
 [Here](https://github.com/jknightlab/mirna_pipeline/blob/master/Alignment_process.md)
 you can see how the aligner was chosen and all bioinformatic
 details including commands.
 
+[Here](https://github.com/jknightlab/mirna_pipeline/blob/master/Alignment_results.md)
+you can see other alignment results -- alignment to miRNAs from
+other organisms than human, to human DNA, to all non-coding human
+RNAs.
+
 **Checking alignment quality**
+
 **Extracting reads mapped to miRNAs**
+
 **Differential miRNA expression analysis**
 
 
