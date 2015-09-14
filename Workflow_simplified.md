@@ -124,27 +124,6 @@ information on the number of reads before and after cleaning.
 | Sample type | File name1       | Before trim| After trim | File name2       | Before trim| After trim |
 | ----------- | ---------------- | ---------- | ---------- | ---------------- | ---------- | ---------- |
 | <sub>HC1-nonTh17</sub> | <sub>WTCHG_189135_274</sub> | <sub>16,658,312</sub> | <sub>10,307,964</sub> | <sub>WTCHG_189136_274</sub> | <sub>17,111,904</sub> | <sub>10,735,176</sub> |
-| HC2-nonTh17 | WTCHG_189135_276 | 23,180,836 | 12,294,948 | WTCHG_189136_276 | 23,817,544 | 12,692,556 | 
-| HC3-nonTh17 | WTCHG_189135_278 | 28,641,100 | 14,340,808 | WTCHG_189136_278 | 29,263,204 | 14,677,208 |
-| HC4-nonTh17 | WTCHG_189135_280 | 27,021,828 | 14,380,188 | WTCHG_189136_280 | 27,634,528 | 14,715,880 |
-|             |                  |            |            |                  |            |            |
-| HC1-Th17    | WTCHG_189135_275 | 18,712,164 | 11,088,016 | WTCHG_189136_275 | 19,226,884 | 11,487,684 |
-| HC2-Th17    | WTCHG_189135_277 | 25,634,288 | 12,997,776 | WTCHG_189136_277 | 26,178,792 | 13,286,152 |
-| HC3-Th17    | WTCHG_189135_279 | 24,934,788 | 12,534,560 | WTCHG_189136_279 | 25,451,552 | 12,808,388 |
-| HC4-Th17    | WTCHG_189135_281 | 36,458,196 | 20,089,092 | WTCHG_189136_281 | 37,117,612 | 20,519,576 |
-|             |                  |            |            |                  |            |            |
-| AS1-nonTh17 | WTCHG_189135_282 | 77,242,220 | 43,030,708 | WTCHG_189136_282 | 79,433,628 | 44,313,332 |
-| AS2-nonTh17 | WTCHG_189135_284 | 20,299,204 | 13,918,564 | WTCHG_189136_284 | 20,800,688 | 14,275,212 |
-| AS3-nonTh17 | WTCHG_189135_286 | 23,372,832 | 14,729,640 | WTCHG_189136_286 | 23,979,804 | 15,319,740 |
-| AS4-nonTh17 | WTCHG_189135_288 | 31,656,996 | 16,691,080 | WTCHG_189136_288 | 32,283,960 | 17,033,808 |
-|             |                  |            |            |                  |            |            |
-| AS1-Th17    | WTCHG_189135_283 | 30,916,908 | 16,576,272 | WTCHG_189136_283 | 31,723,492 | 17,048,232 |
-| AS2-Th17    | WTCHG_189135_285 | 23,164,272 | 19,867,816 | WTCHG_189136_285 | 23,761,664 | 20,393,544 |
-| AS4-Th17    | WTCHG_189135_289 | 39,985,232 | 30,642,800 | WTCHG_189136_289 | 41,047,460 | 31,462,132 |
-
-| Sample type | File name1       | Before trim| After trim | File name2       | Before trim| After trim |
-| ----------- | ---------------- | ---------- | ---------- | ---------------- | ---------- | ---------- |
-| <sub>HC1-nonTh17</sub> | <sub>WTCHG_189135_274</sub> | <sub>16,658,312</sub> | <sub>10,307,964</sub> | <sub>WTCHG_189136_274</sub> | <sub>17,111,904</sub> | <sub>10,735,176</sub> |
 | <sub>HC2-nonTh17</sub> | <sub>WTCHG_189135_276</sub> | <sub>23,180,836</sub> | <sub>12,294,948</sub> | <sub>WTCHG_189136_276</sub> | <sub>23,817,544</sub> | <sub>12,692,556</sub> |
 | <sub>HC3-nonTh17</sub> | <sub>WTCHG_189135_278</sub> | <sub>28,641,100</sub> | <sub>14,340,808</sub> | <sub>WTCHG_189136_278</sub> | <sub>29,263,204</sub> | <sub>14,677,208</sub> |
 | <sub>HC4-nonTh17</sub> | <sub>WTCHG_189135_280</sub> | <sub>27,021,828</sub> | <sub>14,380,188</sub> | <sub>WTCHG_189136_280</sub> | <sub>27,634,528</sub> | <sub>14,715,880</sub> |
@@ -160,7 +139,8 @@ information on the number of reads before and after cleaning.
 | <sub>AS2-Th17</sub> | <sub>WTCHG_189135_285</sub> | <sub>23,164,272</sub> | <sub>19,867,816</sub> | <sub>WTCHG_189136_285</sub> | <sub>23,761,664</sub> | <sub>20,393,544</sub> |
 | <sub>AS4-Th17</sub> | <sub>WTCHG_189135_289</sub> | <sub>39,985,232</sub> | <sub>30,642,800</sub> | <sub>WTCHG_189136_289</sub> | <sub>41,047,460</sub> | <sub>31,462,132</sub> |
 
-
+After trimming and discarding reads, all samples have number of reads
+sufficient for the downstream analysis.
 
 
 
