@@ -204,6 +204,27 @@ sample 285.
 
 **Differential miRNA expression analysis**
 
+Differential expression was performed by the `DESeq` package.
+[Here](https://github.com/jknightlab/mirna_pipeline/blob/master/Diff_expression.md)
+you can find more bioinformatic details on a pilot run on the
+tool including commands (`R` code).
+
+[Results](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_HC_nonTh17.txt)
+of differential expression analysis between Th17 and nonTh17 cells in
+healthy controls.
+
+Dispersion estimation:
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/dispersion_estimation.png)
+
+Differential expression:
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/log_fold_change_HC_Th17_VS_HC_nonTh17.png)
+
+
+
+--------------------------------------
+
 **TEMP -- technical issues**
 
 Questions for the core:
