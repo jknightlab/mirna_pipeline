@@ -208,7 +208,7 @@ Differential expression was performed by the `DESeq` package.
 [Here](https://github.com/jknightlab/mirna_pipeline/blob/master/Diff_expression.md)
 you can find more bioinformatic details including commands (`R` code).
 
-Firstly, pairwise differential expression analysis between
+*Firstly,* pairwise differential expression analysis between
 each pair of conditions was performed. Unfortunately this analysis
 produced no statistically significant differences in miRNA expressions.
 This is most likely due to the low amount of identified miRNAs and
@@ -227,16 +227,23 @@ in red).
 | | |
 | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/log_fold_change_HC_Th17_VS_HC_nonTh17.png) | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_public_example.png) |
 
-
-
-
-
-
-
+We have four groups, *HC_Th17*, *HC_nonTh17*, *AS_Th17*, *AS_nonTh17*.
 The results of pairwise differential miRNA expression analysis
-can be found here:
-[HC_Th17_vs_HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_HC_nonTh17.txt),
+for these groups can be found here:
 
+- [HC_Th17 vs HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_HC_nonTh17.txt)
+- [HC_Th17 vs AS_Th17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_AS_Th17.txt)
+- [HC_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_AS_nonTh17.txt)
+
+- [HC_nonTh17 vs AS_Th27](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_nonTh17_VS_AS_Th17.txt)
+- [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_nonTh17_VS_AS_nonTh17.txt)
+
+- [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_AS_Th17_VS_AS_nonTh17.txt)
+
+- [HC vs AS](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_VS_AS.pooled.txt) (all HC vs all AS)
+
+*Secondly*, we performed ANOVA test across all four groups
+of samples.
 
 
 
