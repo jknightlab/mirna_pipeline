@@ -13,20 +13,21 @@ we proceeded with the analysis of differentially expressed microRNAs.
 
 Input *xls* files containing numbers of reads mapped to various human
 miRNAs were merged into a 
-[matrix](https://github.com/jknightlab/mirna_pipeline/edit/master/mirna_matrix.txt).
+[matrix](https://github.com/jknightlab/mirna_pipeline/edit/master/mirna_matrix_no_285_DESeq_intput.txt).
 This matrix was used as an input file for `DESeq` -- the tool used to generate
 lists of differentially expressed miRNAs.
 
 | Sample name | Sample type |
 | ----------- | ----------- |
+| 274         | HC1-nonTh17 |
+| 276         | HC2-nonTh17 |
+| 278         | HC3-nonTh17 |
+| 280         | HC4-nonTh17 |
+|             |             |
 | 275         | HC1-Th17    |
 | 277         | HC2-Th17    |
 | 279         | HC3-Th17    |
 | 281         | HC4-Th17    |
-|             |             |
-| 276         | HC2-nonTh17 |
-| 278         | HC3-nonTh17 |
-| 280         | HC4-nonTh17 |
 |             |             |
 | 282         | AS1-nonTh17 |
 | 284         | AS2-nonTh17 |
@@ -34,7 +35,7 @@ lists of differentially expressed miRNAs.
 | 288         | AS4-nonTh17 |
 |             |             |
 | 283         | AS1-Th17    |
-| 285         | AS2-Th17    |
+| 289         | AS4-Th17    |
 
 
 **Differentially expressed miRNAs with DESeq**
@@ -89,23 +90,7 @@ dev.off()
 write.table(res, file="diff_expression_HC_Th17_VS_HC_nonTh17.txt", quote=FALSE, sep="\t", row.names=FALSE)
 ```
 
-Comparisons:
-
-We have four groups, *HC_Th17*, *HC_nonTh17*, *AS_Th17*, *AS_nonTh17*.
-The following comparisons have been performed:
-- [HC_Th17 vs HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_HC_nonTh17.txt)
-- [HC_Th17 vs AS_Th17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_AS_Th17.txt)
-- [HC_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_AS_nonTh17.txt)
-
-- [HC_nonTh17 vs AS_Th27](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_nonTh17_VS_AS_Th17.txt)
-- [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_nonTh17_VS_AS_nonTh17.txt)
-
-- [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_AS_Th17_VS_AS_nonTh17.txt)
-
-- [HC vs AS](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_VS_AS.pooled.txt) (all HC vs all AS)
-
-
-More code (for all comparisons listed above):
+More code (for all comparisons):
 ```
 res <- nbinomTest(cds, "HC_Th17", "AS_Th17")
 write.table(res, file="diff_expression_HC_Th17_VS_AS_Th17.txt", quote=FALSE, sep="\t", row.names=FALSE)
