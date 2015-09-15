@@ -206,20 +206,37 @@ sample 285.
 
 Differential expression was performed by the `DESeq` package.
 [Here](https://github.com/jknightlab/mirna_pipeline/blob/master/Diff_expression.md)
-you can find more bioinformatic details on a pilot run on the
-tool including commands (`R` code).
+you can find more bioinformatic details including commands (`R` code).
 
-[Results](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_HC_nonTh17.txt)
-of differential expression analysis between Th17 and nonTh17 cells in
-healthy controls.
+Firstly, pairwise differential expression analysis between
+each pair of conditions was performed. Unfortunately this analysis
+produced no statistically significant differences in miRNA expressions.
+This is most likely due to the low amount of identified miRNAs and
+mainly low number of reads mapped to miRNAs.
 
-Dispersion estimation:
+These two figures demonstrate how low number of identified miRNAs
+affect the analysis. The first row of the figures contains scatter
+plots with the dispersion estimation. The second row of figures
+contains log2 fold change of gene expression against the mean of
+normalized counts (significant differential expression is highlighted
+in red).
 
-![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/dispersion_estimation.png)
+| Taejong's data | Public data |
+| -------------- | ----------- |
+| ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/dispersion_estimation.png) | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/dispersion_estimate_public_example.png) |
+| | |
+| ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/log_fold_change_HC_Th17_VS_HC_nonTh17.png) | ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_public_example.png) |
 
-Differential expression:
 
-![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/log_fold_change_HC_Th17_VS_HC_nonTh17.png)
+
+
+
+
+
+The results of pairwise differential miRNA expression analysis
+can be found here:
+[HC_Th17_vs_HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_HC_nonTh17.txt),
+
 
 
 
