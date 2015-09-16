@@ -210,9 +210,11 @@ you can find more bioinformatic details including commands (`R` code).
 
 *Firstly,* pairwise differential expression analysis between
 each pair of conditions was performed. Unfortunately this analysis
-produced no statistically significant differences in miRNA expressions.
-This is most likely due to the low amount of identified miRNAs and
-mainly low number of reads mapped to miRNAs.
+produced only one statistically significant difference in miRNA
+expressions (see the description after the links to the files
+with differential expression analysis results). This is most
+likely due to the low amount of identified miRNAs and mainly
+low number of reads mapped to miRNAs.
 
 These two figures demonstrate how low number of identified miRNAs
 affect the analysis. The first row of the figures contains scatter
@@ -238,6 +240,16 @@ for these groups can be found here:
 - [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_nonTh17_VS_AS_nonTh17.txt)
 - [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_AS_Th17_VS_AS_nonTh17.txt)
 - [HC vs AS](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_VS_AS.pooled.txt) (all HC vs all AS)
+
+One statistically significant hit: in the comparison
+of HC Th17 vs AS Th17.
+```
+name_of_miRNA_	baseMean	baseMeanA	baseMeanB	foldChange	log2FoldChange	pvalue	padj
+hsa-miR-10b-5p	29.11241	0.1963728	86.944483	442.752059	8.790355204839	1.5e-05	0.013
+```
+More information about the **hsa-miR-10b-5p** microRNA can be found
+[here](http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=MI0000267).
+Limited information about upregulation of miR-10b in cancers is available.
 
 *Secondly*, we performed ANOVA test across all four groups
 of samples.
