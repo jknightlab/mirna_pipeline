@@ -234,12 +234,9 @@ for these groups can be found here:
 - [HC_Th17 vs HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_HC_nonTh17.txt)
 - [HC_Th17 vs AS_Th17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_AS_Th17.txt)
 - [HC_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_Th17_VS_AS_nonTh17.txt)
-
 - [HC_nonTh17 vs AS_Th27](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_nonTh17_VS_AS_Th17.txt)
 - [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_nonTh17_VS_AS_nonTh17.txt)
-
 - [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_AS_Th17_VS_AS_nonTh17.txt)
-
 - [HC vs AS](https://github.com/jknightlab/mirna_pipeline/blob/master/diff_expression_HC_VS_AS.pooled.txt) (all HC vs all AS)
 
 *Secondly*, we performed ANOVA test across all four groups
