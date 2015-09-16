@@ -252,7 +252,27 @@ More information about the **hsa-miR-10b-5p** microRNA can be found
 Limited information about upregulation of miR-10b in cancers is available.
 
 *Secondly*, we performed ANOVA test across all four groups
-of samples.
+of samples. It is done with an `R` package `limma`, and the
+details (including commands) can be found
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/ANOVA.md)
+
+When run *limma* for only reasonably expressed
+[microRNAs](https://github.com/jknightlab/mirna_pipeline/blob/master/limma_output)
+(at least 750 reads mapped to a microRNA in all samples in total)
+Even when run for 1500
+[microRNAs](https://github.com/jknightlab/mirna_pipeline/blob/master/limma_output_full),
+some of which had just a couple of reads mapped to them, *limma*
+gave significant pvalues. For absolutely each microRNA.
+
+As any other statistical test, ANOVA works best when the
+assumptions – in case of ANOVA, normal distribution of the data
+and comparable mean and standard deviation – are true for the
+analyzed dataset. Unfortunately, for this dataset the number of
+expressed microRNAs and the levels of expression are very low,
+which makes the data non-randomly distributed (maybe rather a
+Poisson distribution?). Additionally, the level of noise increases
+when the signal (number of mapped reads) is so low.
+
 
 
 
