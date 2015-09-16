@@ -11,7 +11,10 @@ ANOVA – analysis of variants – is a statistical test which, while analyzing 
 *limma* requires files with count data without low counts or zero counts. Looking at all identified [microRNAs](https://github.com/jknightlab/mirna_pipeline/blob/master/mirna_matrix_no_285.xls), there are 2,577 human microRNAs in the list; 1,055 of them had at least one read in at least one sample mapped to them; 899 microRNAs have more than 1 read mapped to them; 497 microRNAs – more than 10 reads; 239 microRNAs – more than 100 reads; 116 microRNAs – more than 750 reads. *750* was taken as a cutoff – when more than 750 reads were mapped to a microRNA, this line from the input file was selected for further analysis. This way on average at least 50 reads were mapped to a microRNA in each sample.
 
 ```
-cat mirna_matrix_no_285_DESeq_intput.txt | awk '$2+$3+$4+$5+$6+$7+$8+$9+$10+$11+$12+$13+$14+$15 > 750 {print $0}' | awk '{print $1 "\t" $2 "\t" $4 "\t" $6 "\t" $8 "\t" $3 "\t" $5 "\t" $7 "\t" $9 "\t" $10 "\t" $12 "\t" $13 "\t" $14 "\t" $11 "\t" $15}' >> limma_input
+cat mirna_matrix_no_285_DESeq_intput.txt | \
+    awk '$2+$3+$4+$5+$6+$7+$8+$9+$10+$11+$12+$13+$14+$15 > 750 {print $0}' | \
+    awk '{print $1 "\t" $2 "\t" $4 "\t" $6 "\t" $8 "\t" $3 "\t" $5 "\t" $7 \
+    "\t" $9 "\t" $10 "\t" $12 "\t" $13 "\t" $14 "\t" $11 "\t" $15}' >> limma_input
 ```
 
 ### Running *limma*
@@ -36,7 +39,10 @@ counts <- counts[,-1]
 dge <- DGEList(counts=counts)
 dge <- calcNormFactors(dge)
 
-design <- rbind(c(1,0,0,0), c(1,0,0,0), c(1,0,0,0), c(1,0,0,0), c(0,1,0,0), c(0,1,0,0), c(0,1,0,0), c(0,1,0,0), c(0,0,1,0), c(0,0,1,0), c(0,0,1,0), c(0,0,1,0), c(0,0,0,1), c(0,0,0,1))
+design <- rbind(c(1,0,0,0), c(1,0,0,0), c(1,0,0,0), c(1,0,0,0),\
+                c(0,1,0,0), c(0,1,0,0), c(0,1,0,0), c(0,1,0,0),\
+                c(0,0,1,0), c(0,0,1,0), c(0,0,1,0), c(0,0,1,0),
+                c(0,0,0,1), c(0,0,0,1))
 
 # applying the voom transformation
 v <- voom(dge,design,plot=TRUE)
