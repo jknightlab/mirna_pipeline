@@ -265,14 +265,59 @@ some of which had just a couple of reads mapped to them, *limma*
 gave significant pvalues. For absolutely each microRNA.
 
 As any other statistical test, ANOVA works best when the
-assumptions – in case of ANOVA, normal distribution of the data
-and comparable mean and standard deviation – are true for the
+assumptions -- in case of ANOVA, normal distribution of the data
+and comparable mean and standard deviation -- are true for the
 analyzed dataset. Unfortunately, for this dataset the number of
 expressed microRNAs and the levels of expression are very low,
 which makes the data non-randomly distributed (maybe rather a
 Poisson distribution?). Additionally, the level of noise increases
 when the signal (number of mapped reads) is so low.
 
+*Thirdly*. we ignored pvalues and applied cutoffs on miRNA expression
+under each condition and the fold change to create a list of miRNA
+candidates for future experimental validation.
+
+Filtering steps:
+- remove lines containing `NA` -- this means that miRNA expression was
+zero under both conditions;
+- remove lines containing `Inf` -- this means that zero reads was mapped
+in one of the samples. Genes and miRNAs never get absolute zero
+expression (unless they are knocked out), so when zero reads map to an
+miRNA, this indicates that not enough miRNA was sequenced or this
+particular miRNA was not captured -- but not that it is 100% silenced.
+- log2foldChange should be either below -2 or above 2 -- such filter
+is common practice in any differential expression analysis (also for
+genes), as it is believed/assumed that qPCR won''t capture smaller
+differences in expression.
+- average miRNA expression under one condition (`baseMeanA`) should be
+above 5
+- average miRNA expression under the second condition (`baseMeanB`)
+should be above 5
+
+This figure illustrates which fold changes we select. All log2 of fold
+changes are shown in black, the selected ones (above 2 or below -2) are
+shown in red.
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/HC_Th17_vs_AS_Th17_log2FC_scatter.png) 
+
+This table contains number of miRNAs remaining after each filtering
+step in ech pairwise comparison.
+
+| Filtering steps | HC Th17 vs HC nonTh17* | AS Th17 vs AS nonTh17 | HC Th17 vs AS Th17 | HC nonTh17 vs AS nonTh17 | HC nonTh17 vs AS Th17 | HC Th17 vs AS nonTh17 |
+| --------------- | ---------------------- | --------------------- | ------------------ | ------------------------ | --------------------- | ------- |
+| initially       | 2576 | 2576 | 2576 | 2576 | 2576 | 2576 | 
+| no NA           | 897  | 888  | 845  | 965  | 880  | 953  |
+| no Inf          | 632  | 546  | 504  | 649  | 514  | 616  |
+| log2FoldChange  | 70   | 63   | 70   | 66   | 90   | 93   |
+| baseMeanA       | 4    | 12   | 27   | 13   | 28   | 15   |
+| baseMeanB       | 2    | 1    | 11   | 5    | 13   | 8    |
+
+- [HC_Th17 vs HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_Th17_VS_HC_nonTh17.txt)
+- [HC_Th17 vs AS_Th17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_Th17_VS_AS_Th17.txt)
+- [HC_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_Th17_VS_AS_nonTh17.txt)
+- [HC_nonTh17 vs AS_Th27](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_nonTh17_VS_AS_Th17.txt)
+- [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_nonTh17_VS_AS_nonTh17.txt)
+- [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_AS_Th17_VS_AS_nonTh17.txt)
 
 
 
