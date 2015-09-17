@@ -294,6 +294,9 @@ above 5
 - average miRNA expression under the second condition (`baseMeanB`)
 should be above 5
 
+Commands used for filtering and creating candidate lists can be found
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/Filtering_steps_code.md)
+
 This figure illustrates which fold changes we select. All log2 of fold
 changes are shown in black, the selected ones (above 2 or below -2) are
 shown in red.
@@ -312,7 +315,7 @@ step in ech pairwise comparison.
 | baseMeanA       | 4    | 12   | 27   | 13   | 28   | 15   |
 | baseMeanB       | 2    | 1    | 11   | 5    | 13   | 8    |
 
-* used cutoff of 4 instead of 5 at the baseMeanA step (one
+`*` used cutoff of 4 instead of 5 at the baseMeanA step (one
 of the potential candidate miRNAs had expression of 4.87).
 
 Lists of miRNA candidates for validation can be found here: 
