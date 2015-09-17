@@ -312,12 +312,17 @@ step in ech pairwise comparison.
 | baseMeanA       | 4    | 12   | 27   | 13   | 28   | 15   |
 | baseMeanB       | 2    | 1    | 11   | 5    | 13   | 8    |
 
-- [HC_Th17 vs HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_Th17_VS_HC_nonTh17.txt)
-- [HC_Th17 vs AS_Th17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_Th17_VS_AS_Th17.txt)
-- [HC_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_Th17_VS_AS_nonTh17.txt)
-- [HC_nonTh17 vs AS_Th27](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_nonTh17_VS_AS_Th17.txt)
-- [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_HC_nonTh17_VS_AS_nonTh17.txt)
-- [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidate_AS_Th17_VS_AS_nonTh17.txt)
+* used cutoff of 4 instead of 5 at the baseMeanA step (one
+of the potential candidate miRNAs had expression of 4.87).
+
+Lists of miRNA candidates for validation can be found here: 
+
+- [HC_Th17 vs HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_HC_Th17_VS_HC_nonTh17.txt)
+- [HC_Th17 vs AS_Th17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_HC_Th17_VS_AS_Th17.txt)
+- [HC_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_HC_Th17_VS_AS_nonTh17.txt)
+- [HC_nonTh17 vs AS_Th27](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_HC_nonTh17_VS_AS_Th17.txt)
+- [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_HC_nonTh17_VS_AS_nonTh17.txt)
+- [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_AS_Th17_VS_AS_nonTh17.txt)
 
 
 
