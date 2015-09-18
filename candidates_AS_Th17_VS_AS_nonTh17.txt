@@ -1,2 +1,2 @@
-id	baseMean	baseMeanA	baseMeanB	foldChange	log2FoldChange	pval	padj
-hsa-miR-143-3p	22.6884248075992	49.293978560184	9.38564793130681	0.190401509584942	-2.39288317789026	0.21410430873812	1
+id      	baseMean	baseMeanA	baseMeanB	foldChange	log2FoldChange	pval    	padj
+hsa-miR-143-3p	22.6884248075	49.293978560	9.38564793130	0.19040150958	-2.392883177	0.214104	1
