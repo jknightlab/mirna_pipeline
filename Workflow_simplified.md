@@ -12,7 +12,7 @@ is **P150188**.
 
 ### Experimental Design
 
-Two groups of cells -- Th17 and non-Th27 -- were
+Two groups of cells -- [Th17](https://en.wikipedia.org/wiki/T_helper_17_cell) and non-Th17 -- were
 separately sequenced for healthy controls and AS
 patients. This table provides the names of the samples
 and the names of the corresponding sequencing files.
@@ -21,7 +21,7 @@ sequenced due to failed library prep (message from
 the core: *One sample, AS3-TH17, failed the library
 prep and could not be included.*)
 
-The miRNA were run on a HiSeq2500 Rapid mode. With *Rapid
+The miRNA samples were run on a HiSeq2500 Rapid mode. With *Rapid
 mode* the libraries are run on a single sequencing
 flowcell that has two lanes, so two sequencing files
 will be produced for one sample (message from the core:
@@ -57,9 +57,22 @@ for healthy controls.
 Sequencing data is stored in `fastq` files -- text files
 of a certain
 [format](https://en.wikipedia.org/wiki/FASTQ_format)
-containing sequenced reads names, sequences and
+containing sequenced reads' names, sequences and
 sequencing
 [quality scores](https://en.wikipedia.org/wiki/Phred_quality_score).
+
+First eight lines of `WTCHG_189135_286_1.fastq`:
+
+```
+@HISEQ2500-09:311:H3K5LBCXX:1:1101:1471:1980 1:N:0:CTCAGCTG # read name
+NAGGGAGGACTTCTCTGAGGAGATCGGAAGAGCACACGTCTGAACTCCAGT         # read sequence
++                                                           # delimiter line
+#<DDDGHHHIIIIIIIIHIIHIIIIIIIIIIIIIIIIIIIIIIHIIIIIHI         # sequencing quality
+@HISEQ2500-09:311:H3K5LBCXX:1:1101:3278:1986 1:N:0:CTCAGCTG # read name
+NAAGTGGACGTATAGGGTGTGACGTAGATCGGAAGAGCACACGTCTGAACT         # read sequence
++                                                           # delimiter line
+#<DDDIIIIIHIIIIIIIIIIIIIIIIIIIIIIIIIHHHIIIHIIIIIIIF         # sequencing quality
+```
 
 Analysis workflow starting from the `fastq` files:
 - Checking quality of the initial `fastq` files: checking whether any
@@ -69,9 +82,9 @@ done with a tool called
 [`fastQC`](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/).
 - Cleaning the `fastq` files: removing adapters ("Overrepresented
 sequences" in the `fastQC` report) found during the previous analysis
-step (bash command); trimming low quality bases at the end of the reads
-(tool [cutadapt](https://pypi.python.org/pypi/cutadapt/1.4.2));
-discarding reads shorter than 15nt or longer than 26nt (bash command).
+step (bash command); trimming low quality bases at the end of the reads;
+discarding reads shorter than 15nt or longer than 35nt
+(tool [cutadapt](https://pypi.python.org/pypi/cutadapt/1.4.2)).
 - Rerunning quality control on trimmed `fastq` files.
 - [Aligning](https://en.wikipedia.org/wiki/Sequence_alignment)
 trimmed `fastq` files to the database of known human
@@ -97,7 +110,9 @@ From the report we can see that the following checks failed:
 - per base sequence content: this is expected, as the tool was
 initially designed to work with whole genome reads. MicroRNAs
 have a sequence content different from the whole genome, this
-is why this check is expected to fail.
+is why this check is expected to fail. Also, as we will see later,
+adapters were not trimmed yet and are overrepresented -- their
+sequence also biases the sequence content of the reads.
 - sequence duplication level: this is expected, as the tool
 was designed to work with DNA data, and RNA (and miRNA) has
 expression, so fragments of certain reads are expected to
@@ -118,26 +133,29 @@ An example report of quality checks on trimmed `fastq`
 files for the sample AS2-Th17 can be found
 [here](https://github.com/jknightlab/mirna_pipeline/blob/master/WTCHG_189136_285_1_fastqc.trimmed.txt).
 We can see that only sequence duplication level (and for some
-files -- per nucleotide sequence content) still fail -- as
-expected (see above). Note that reads which are too short or
+files -- per nucleotide sequence content) still fails -- as
+expected (see the explanation above). Note that reads which are too short or
 too long after removing adapters will be discarded, so the
 number of reads in a file can change. This table contains the
 information on the number of reads before and after cleaning.
 
-| Sample type | File name1       | Before trim| After trim | File name2       | Before trim| After trim |
+| <sub>Sample type</sub> | <sub>File name1</sub> | <sub>Before trim</sub> | <sub>After trim</sub> | <sub>File name2</sub> | <sub>Before trim</sub> | <sub>After trim</sub> |
 | ----------- | ---------------- | ---------- | ---------- | ---------------- | ---------- | ---------- |
 | <sub>HC1-nonTh17</sub> | <sub>WTCHG_189135_274</sub> | <sub>16,658,312</sub> | <sub>10,307,964</sub> | <sub>WTCHG_189136_274</sub> | <sub>17,111,904</sub> | <sub>10,735,176</sub> |
 | <sub>HC2-nonTh17</sub> | <sub>WTCHG_189135_276</sub> | <sub>23,180,836</sub> | <sub>12,294,948</sub> | <sub>WTCHG_189136_276</sub> | <sub>23,817,544</sub> | <sub>12,692,556</sub> |
 | <sub>HC3-nonTh17</sub> | <sub>WTCHG_189135_278</sub> | <sub>28,641,100</sub> | <sub>14,340,808</sub> | <sub>WTCHG_189136_278</sub> | <sub>29,263,204</sub> | <sub>14,677,208</sub> |
 | <sub>HC4-nonTh17</sub> | <sub>WTCHG_189135_280</sub> | <sub>27,021,828</sub> | <sub>14,380,188</sub> | <sub>WTCHG_189136_280</sub> | <sub>27,634,528</sub> | <sub>14,715,880</sub> |
+|   |   |   |   |   |   |   |
 | <sub>HC1-Th17</sub> | <sub>WTCHG_189135_275</sub> | <sub>18,712,164</sub> | <sub>11,088,016</sub> | <sub>WTCHG_189136_275</sub> | <sub>19,226,884</sub> | <sub>11,487,684</sub> |
 | <sub>HC2-Th17</sub> | <sub>WTCHG_189135_277</sub> | <sub>25,634,288</sub> | <sub>12,997,776</sub> | <sub>WTCHG_189136_277</sub> | <sub>26,178,792</sub> | <sub>13,286,152</sub> |
 | <sub>HC3-Th17</sub> | <sub>WTCHG_189135_279</sub> | <sub>24,934,788</sub> | <sub>12,534,560</sub> | <sub>WTCHG_189136_279</sub> | <sub>25,451,552</sub> | <sub>12,808,388</sub> |
 | <sub>HC4-Th17</sub> | <sub>WTCHG_189135_281</sub> | <sub>36,458,196</sub> | <sub>20,089,092</sub> | <sub>WTCHG_189136_281</sub> | <sub>37,117,612</sub> | <sub>20,519,576</sub> |
+|   |   |   |   |   |   |   |
 | <sub>AS1-nonTh17</sub> | <sub>WTCHG_189135_282</sub> | <sub>77,242,220</sub> | <sub>43,030,708</sub> | <sub>WTCHG_189136_282</sub> | <sub>79,433,628</sub> | <sub>44,313,332</sub> |
 | <sub>AS2-nonTh17</sub> | <sub>WTCHG_189135_284</sub> | <sub>20,299,204</sub> | <sub>13,918,564</sub> | <sub>WTCHG_189136_284</sub> | <sub>20,800,688</sub> | <sub>14,275,212</sub> |
 | <sub>AS3-nonTh17</sub> | <sub>WTCHG_189135_286</sub> | <sub>23,372,832</sub> | <sub>14,729,640</sub> | <sub>WTCHG_189136_286</sub> | <sub>23,979,804</sub> | <sub>15,319,740</sub> |
 | <sub>AS4-nonTh17</sub> | <sub>WTCHG_189135_288</sub> | <sub>31,656,996</sub> | <sub>16,691,080</sub> | <sub>WTCHG_189136_288</sub> | <sub>32,283,960</sub> | <sub>17,033,808</sub> |
+|   |   |   |   |   |   |   |
 | <sub>AS1-Th17</sub> | <sub>WTCHG_189135_283</sub> | <sub>30,916,908</sub> | <sub>16,576,272</sub> | <sub>WTCHG_189136_283</sub> | <sub>31,723,492</sub> | <sub>17,048,232</sub> |
 | <sub>AS2-Th17</sub> | <sub>WTCHG_189135_285</sub> | <sub>23,164,272</sub> | <sub>19,867,816</sub> | <sub>WTCHG_189136_285</sub> | <sub>23,761,664</sub> | <sub>20,393,544</sub> |
 | <sub>AS4-Th17</sub> | <sub>WTCHG_189135_289</sub> | <sub>39,985,232</sub> | <sub>30,642,800</sub> | <sub>WTCHG_189136_289</sub> | <sub>41,047,460</sub> | <sub>31,462,132</sub> |
@@ -147,9 +165,10 @@ sufficient for the downstream analysis.
 
 **Aligning reads to the database of human microRNAs**
 
-This table contains numbers of reads mapped to miRNAs.
+This table contains numbers of reads mapped to miRNAs. Column `RNA`
+contains the information about the input material (number of *ng*).
 
-| Sample type | File name1 | Number of mapped reads |  File name2 | Number of mapped reads | RNA |
+| <sub>Sample type</sub> | <sub>File name1</sub> | <sub>Number of mapped reads</sub> |  <sub>File name2</sub> | <sub>Number of mapped reads</sub> | <sub>RNA, ng</sub> |
 | ----------- | ---------- | ---------------------- | ----------- | ---------------------- | --- |
 | <sub>HC1-nonTh17</sub> | <sub>WTCHG_189135_274</sub> | <sub>17,714</sub> | <sub>WTCHG_189136_274</sub> | <sub>18,437</sub> | <sub>90.83</sub> |
 | <sub>HC2-nonTh17</sub> | <sub>WTCHG_189135_276</sub> | <sub>2,269</sub>  | <sub>WTCHG_189136_276</sub> | <sub>2,491</sub>  | <sub>100.00</sub>|
@@ -211,17 +230,18 @@ you can find more bioinformatic details including commands (`R` code).
 *Firstly,* pairwise differential expression analysis between
 each pair of conditions was performed. Unfortunately this analysis
 produced only one statistically significant difference in miRNA
-expressions (see the description after the links to the files
-with differential expression analysis results). This is most
-likely due to the low amount of identified miRNAs and mainly
-low number of reads mapped to miRNAs.
+expressions (see the description after the links to the files with
+differential expression analysis results). The absence of almost
+any differentially expressed miRNAs is most likely due to the low
+amount of identified miRNAs and mainly low number of reads mapped
+to miRNAs.
 
 These two figures demonstrate how low number of identified miRNAs
 affect the analysis. The first row of the figures contains scatter
-plots with the dispersion estimation. The second row of figures
-contains log2 fold change of gene expression against the mean of
-normalized counts (significant differential expression is highlighted
-in red).
+plots with the [dispersion](https://en.wikipedia.org/wiki/Statistical_dispersion)
+estimation. The second row of figures contains log2 fold change of
+gene expression against the mean (average) of normalized counts
+(significant differential expression is highlighted in red).
 
 | Taejong's data | Public data |
 | -------------- | ----------- |
@@ -250,36 +270,48 @@ hsa-miR-10b-5p	29.11241	0.1963728	86.944483	442.752059	8.790355204839	1.5e-05	0.
 More information about the **hsa-miR-10b-5p** microRNA can be found
 [here](http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=MI0000267).
 Limited information about upregulation of miR-10b in cancers is available.
+In this data, this microRNA is upregulated in `AS` versus `HC`. However,
+the expression of this microRNA in `HC` is probably too low to select it
+as a candidate for experimental validation with qPCR (qPCR might not be
+sensivite enough). Raw numbers of reads mapped to this microRNA:
+
+```
+mirna         	HC1-Th17	HC2-Th17	HC3-Th17	HC4-Th17	AS1-Th17	AS4-nonTh17
+hsa-miR-10b-5p	0       	0       	1       	0       	97      	22
+```
 
 *Secondly*, we performed ANOVA test across all four groups
 of samples. It is done with an `R` package `limma`, and the
 details (including commands) can be found
-[here](https://github.com/jknightlab/mirna_pipeline/blob/master/ANOVA.md)
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/ANOVA.md).
 
-When run *limma* for only reasonably expressed
+When running *limma* for only reasonably expressed
 [microRNAs](https://github.com/jknightlab/mirna_pipeline/blob/master/limma_output)
-(at least 750 reads mapped to a microRNA in all samples in total)
-Even when run for 1500
+(at least 750 reads mapped to a microRNA in all samples in total),
+all microRNAs were identified as significantly differentially.
+expressed Even when run for 1500
 [microRNAs](https://github.com/jknightlab/mirna_pipeline/blob/master/limma_output_full),
-some of which had just a couple of reads mapped to them, *limma*
-gave significant pvalues. For absolutely each microRNA.
+(at least 1 read mapped to each microRNA in at least one of
+the samples), *limma* gave significant pvalues. For absolutely
+each microRNA.
 
 As any other statistical test, ANOVA works best when the
-assumptions -- in case of ANOVA, normal distribution of the data
-and comparable mean and standard deviation -- are true for the
-analyzed dataset. Unfortunately, for this dataset the number of
-expressed microRNAs and the levels of expression are very low,
-which makes the data non-randomly distributed (maybe rather a
-Poisson distribution?). Additionally, the level of noise increases
-when the signal (number of mapped reads) is so low.
+assumptions -- in case of ANOVA, normal distribution of the
+data and comparable standard deviation -- are true for the
+analyzed dataset. Unfortunately, for this dataset the
+number of expressed microRNAs and the levels of expression
+are very low, which makes the data non-randomly distributed
+(maybe rather a Poisson distribution?). Additionally, the
+level of noise increases when the signal (number of mapped
+reads) is so low.
 
-*Thirdly*. we ignored pvalues and applied cutoffs on miRNA expression
+*Thirdly*, we ignored pvalues and applied cutoffs on miRNA expression
 under each condition and the fold change to create a list of miRNA
 candidates for future experimental validation.
 
 Filtering steps:
 - remove lines containing `NA` -- this means that miRNA expression was
-zero under both conditions;
+zero under both conditions.
 - remove lines containing `Inf` -- this means that zero reads was mapped
 in one of the samples. Genes and miRNAs never get absolute zero
 expression (unless they are knocked out), so when zero reads map to an
@@ -290,12 +322,13 @@ is common practice in any differential expression analysis (also for
 genes), as it is believed/assumed that qPCR won''t capture smaller
 differences in expression.
 - average miRNA expression under one condition (`baseMeanA`) should be
-above 5
+above 5 -- lower expression probably won't be accurately measured by
+qPCR.
 - average miRNA expression under the second condition (`baseMeanB`)
-should be above 5
+should be above 5.
 
 Commands used for filtering and creating candidate lists can be found
-[here](https://github.com/jknightlab/mirna_pipeline/blob/master/Filtering_steps_code.md)
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/Filtering_steps_code.md).
 
 This figure illustrates which fold changes we select. All log2 of fold
 changes are shown in black, the selected ones (above 2 or below -2) are
@@ -304,10 +337,10 @@ shown in red.
 ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/HC_Th17_vs_AS_Th17_log2FC_scatter.png) 
 
 This table contains number of miRNAs remaining after each filtering
-step in ech pairwise comparison.
+step in each pairwise comparison.
 
-| Filtering steps | HC Th17 vs HC nonTh17* | AS Th17 vs AS nonTh17 | HC Th17 vs AS Th17 | HC nonTh17 vs AS nonTh17 | HC nonTh17 vs AS Th17 | HC Th17 vs AS nonTh17 |
-| --------------- | ---------------------- | --------------------- | ------------------ | ------------------------ | --------------------- | ------- |
+| <sub>Filtering steps</sub> | <sub>HC Th17 vs HC nonTh17</sub>* | <sub>AS Th17 vs AS nonTh17</sub> | <sub>HC Th17 vs AS Th17</sub> | <sub>HC nonTh17 vs AS nonTh17</sub> | <sub>HC nonTh17 vs AS Th17</sub> | <sub>HC Th17 vs AS nonTh17</sub> |
+| --------------- | ---- | ---- | ---- | ---- | ---- | ---- |
 | initially       | 2576 | 2576 | 2576 | 2576 | 2576 | 2576 | 
 | no NA           | 897  | 888  | 845  | 965  | 880  | 953  |
 | no Inf          | 632  | 546  | 504  | 649  | 514  | 616  |
