@@ -361,16 +361,34 @@ Lists of miRNA candidates for validation can be found here:
 - [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_HC_nonTh17_VS_AS_nonTh17.txt)
 - [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_AS_Th17_VS_AS_nonTh17.txt)
 
+### Compare RNA-Seq and qPCR results
+
+| miR-155-5p | HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 | 
+| ---------- | ------- | ---------- | ------- | ----------- |
+| RNA-Seq    | 34,084  | 28,681     | 19,189  | 11,178      |
+| qPCR       | 7.1     | 1.5        | 48      | 1           |
+
+| miR-146a-5p| HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 |
+| ---------- | ------- | ---------- | ------- | ----------- |
+| RNA-Seq    | 7,641   | 4,664      | 17,742  | 14,838      |
+| qPCR       | 8.8     | 1.5        | 4.2     | 1           |
+
+| miR-210-3p | HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 |
+| ---------- | ------- | ---------- | ------- | ----------- |
+| RNA-Seq    | 33      | 43         | 40      | 35          |
+| qPCR       | 11.2    | 2          | 25.5    | 2.1         |
+
+| miR-21-5p | HC Th17  | HC nonTh17 | AS Th17 | AS non Th17 |
+| --------- | -------- | ---------- | ------- | ----------- |
+| RNA-Seq   | 286,653  | 175,452    | 239,449 | 211,160     |
+| qPCR      | 9.5      | 2.4        | 1.4     | 0.7         |
 
 
---------------------------------------
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/miR-155-5p_miR-146a-5p.png)
 
-**TEMP -- technical issues**
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/miR-210-3p_miR-21-5p.png)
 
-Questions for the core:
-- **Hc4 th17 40.9 49.08** ???
-- The numbers -- sequencing results from the core, bam files --
-and the expression data -- do not add up!!!!!!!!!!!
+
 
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
