@@ -363,6 +363,16 @@ Lists of miRNA candidates for validation can be found here:
 
 ### Compare RNA-Seq and qPCR results
 
+Four microRNAs -- **miR-155-5p**, **miR-146a-5p**, **miR-210-3p**
+and **miR-21-5p** -- were previously experimentally validated with
+qPCR. None of these microRNAs showed significant differences in
+expression across different conditions due to the low fold change.
+However, we decided to check expression levels of these miRNAs.
+Here we compared changes in relative expression of these
+microRNAs in qPCR vs RNA-Seq data (results of qPCR experiments
+were provided by Taejong Kim). Unfortunately the results of
+miRNA sequencing do not confirm the resuts of qPCR.
+
 | miR-155-5p | HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 | 
 | ---------- | ------- | ---------- | ------- | ----------- |
 | RNA-Seq    | 34,084  | 28,681     | 19,189  | 11,178      |
