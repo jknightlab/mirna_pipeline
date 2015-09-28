@@ -3,7 +3,7 @@ Differential microRNA expression
 
 The goal of this project was, starting from the
 sequencing files provided by the Sequencing Core of
-WTCHG, generate a list of candidate microRNAs
+WTCHG, to generate a list of candidate microRNAs
 differentially expressed in healthy controls versus
 patients with ankylosing spondylitis for further
 experimental validation. Sequencing project number
