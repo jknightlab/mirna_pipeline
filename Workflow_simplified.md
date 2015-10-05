@@ -380,6 +380,32 @@ Lists of final miRNA candidates for validation can be found here:
 - [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/full_candidates_AS_Th17_VS_AS_nonTh17.txt)
 
 
+### Results of Kruskal-Wallis test
+
+[Kruskal-Wallis test](https://statistics.laerd.com/spss-tutorials/kruskal-wallis-h-test-using-spss-statistics.php)
+, a rank-based non-parametric test (one-way ANOVA on ranks) run
+to determine is there is a statistically significant difference
+between two or more groups, was run per miRNA. Unfortunately the
+test did not produce any p-value lower than 0.5.You can find the code
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/kw_r.R)
+and the results
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/kruskal_wallis_results).
+
+
+### miRNA targets
+
+[Here](https://github.com/jknightlab/mirna_pipeline/blob/master/mirna_expression_and_targets.txt)
+is the list of miRNAs and their targets (target gene names).
+Only targets with strong experimental evidence (shown with
+a reporter assay, Western blot or qPCR -- at least one of
+the three) are listed here. When the last column of the file
+is empty, that means that no targets with strong experimental
+evidence were ever published and only some predictions from
+some microarray or RNA-Seq data are available. Information
+about the targets was obtained from the miRNA targets database
+[miRTarBase](http://mirtarbase.mbc.nctu.edu.tw/index.php).
+
+
 ### Compare RNA-Seq and qPCR results
 
 Four microRNAs -- **miR-155-5p**, **miR-146a-5p**, **miR-210-3p**
