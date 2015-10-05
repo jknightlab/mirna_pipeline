@@ -361,6 +361,25 @@ Lists of miRNA candidates for validation can be found here:
 - [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_HC_nonTh17_VS_AS_nonTh17.txt)
 - [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/candidates_AS_Th17_VS_AS_nonTh17.txt)
 
+### Final list of candidates with relaxed filtering criteria
+
+Previously, we asked for the relative miRNA expression under
+both conditions to be at least 5. Here, we ask for the
+expression at least just one condition to be above 5. This
+resulted in **four** extra miRNA candidates for the
+*HC_Th17 vs AS_Th17* comparison; and **two** extra miRNA
+candidates for the *HC_nonTh17 vs AS_Th17* comparison.
+
+Lists of final miRNA candidates for validation can be found here: 
+
+- [HC_Th17 vs HC_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/full_candidates_HC_Th17_VS_HC_nonTh17.txt)
+- [HC_Th17 vs AS_Th17](https://github.com/jknightlab/mirna_pipeline/blob/master/full_candidates_HC_Th17_VS_AS_Th17.txt)
+- [HC_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/full_candidates_HC_Th17_VS_AS_nonTh17.txt)
+- [HC_nonTh17 vs AS_Th27](https://github.com/jknightlab/mirna_pipeline/blob/master/full_candidates_HC_nonTh17_VS_AS_Th17.txt)
+- [HC_nonTh17 vs AS_nonTh27](https://github.com/jknightlab/mirna_pipeline/blob/master/full_candidates_HC_nonTh17_VS_AS_nonTh17.txt)
+- [AS_Th17 vs AS_nonTh17](https://github.com/jknightlab/mirna_pipeline/blob/master/full_candidates_AS_Th17_VS_AS_nonTh17.txt)
+
+
 ### Compare RNA-Seq and qPCR results
 
 Four microRNAs -- **miR-155-5p**, **miR-146a-5p**, **miR-210-3p**
