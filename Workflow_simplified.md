@@ -418,6 +418,8 @@ microRNAs in qPCR vs RNA-Seq data (results of qPCR experiments
 were provided by Taejong Kim). Unfortunately the results of
 miRNA sequencing do not confirm the resuts of qPCR.
 
+** Different number of samples was used for qPCR and for RNA-Seq**
+
 | miR-155-5p | HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 | 
 | ---------- | ------- | ---------- | ------- | ----------- |
 | RNA-Seq    | 34,084  | 28,681     | 19,189  | 11,178      |
@@ -443,7 +445,37 @@ miRNA sequencing do not confirm the resuts of qPCR.
 
 ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/miR-210-3p_miR-21-5p.png)
 
+** Same samples were used for qPCR and for RNA-Seq**
 
+| miR-155-5p | HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 |
+| ---------- | ------- | ---------- | ------- | ----------- |
+| RNA-Seq    | 34,084  | 28,681     | 19,189  | 11,178      |
+| qPCR       | 10.97   | 1.45       | 3.49    | 1.13        |
+
+| miR-146a-5p| HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 |
+| ---------- | ------- | ---------- | ------- | ----------- |
+| RNA-Seq    | 7,641   | 4,664      | 17,742  | 14,838      |
+| qPCR       | 18.26   | 0.74       | 3.28    | 1.78        |
+
+| miR-210-3p | HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 |
+| ---------- | ------- | ---------- | ------- | ----------- |
+| RNA-Seq    | 33      | 43         | 40      | 35          |
+| qPCR       | 11.43   | 2.51       | 4.64    | 2.95        |
+
+| miR-21-5p  | HC Th17  | HC nonTh17 | AS Th17 | AS non Th17 |
+| ---------- | -------- | ---------- | ------- | ----------- |
+| RNA-Seq    | 286,653  | 175,452    | 239,449 | 211,160     |
+| qPCR       | 36.78    | 2.13       | 2.57    | 1.02        |
+
+| miR-10b-5p | HC Th17  | HC nonTh17 | AS Th17 | AS non Th17 |
+| ---------- | -------- | ---------- | ------- | ----------- |
+| RNA-Seq    | 0.25     | 2          | 111.5   | 34.75       |
+| qPCR       | 11.42    | 2.47       | 25.7    | 5.79        |
+
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/miR-155-5p_miR-146a-5p_miR-210-3p.png)
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/miR-21-5p_miR-10b-5p.png)
 
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
