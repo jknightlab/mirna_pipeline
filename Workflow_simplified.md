@@ -418,7 +418,7 @@ microRNAs in qPCR vs RNA-Seq data (results of qPCR experiments
 were provided by Taejong Kim). Unfortunately the results of
 miRNA sequencing do not confirm the resuts of qPCR.
 
-** Different number of samples was used for qPCR and for RNA-Seq**
+**Different number of samples was used for qPCR and for RNA-Seq**
 
 | miR-155-5p | HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 | 
 | ---------- | ------- | ---------- | ------- | ----------- |
@@ -445,7 +445,7 @@ miRNA sequencing do not confirm the resuts of qPCR.
 
 ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/miR-210-3p_miR-21-5p.png)
 
-** Same samples were used for qPCR and for RNA-Seq**
+**Same samples were used for qPCR and for RNA-Seq**
 
 | miR-155-5p | HC Th17 | HC nonTh17 | AS Th17 | AS non Th17 |
 | ---------- | ------- | ---------- | ------- | ----------- |
