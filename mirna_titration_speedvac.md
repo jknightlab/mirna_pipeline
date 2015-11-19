@@ -52,7 +52,7 @@ sufficient amount of reads mapping to microRNAs -- above 8 mln (median
 at 10 mln). This suggest that the initial RNA yield can be as low
 as 150 nl.
 
-https://github.com/jknightlab/mirna_pipeline/blob/master/all_samples.mapped_reads.png
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/all_samples.mapped_reads.png)
 
 On this plot we can see that samples generate using SpeedVac-concentrated
 microRNA generate numbers of reads comparable to the amount of reads from
@@ -61,7 +61,7 @@ when the input yield of a certain sample is not enough, we can benefit from
 concentrating RNA (and rather not sequence non-concentrated RNA at very low
 input yield).
 
-https://github.com/jknightlab/mirna_pipeline/blob/master/SV_vs_nonSV.mapped_reads.png
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/SV_vs_nonSV.mapped_reads.png)
 
 
 **How comparable are different samples**
