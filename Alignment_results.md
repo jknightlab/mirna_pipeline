@@ -8,7 +8,7 @@ Bioinformatic pipeline to analyze micro RNA sequencing data
 
 -> Results from sequencing core: on average less than *1%* was mapped.
 
--> Results of my alignment: after trimming the adapters and removing too short
+-> Results of my alignment: after trimming the adapters and removing too shorkljlkjkljlkt
 and too long reads, *87%* of reads was mapped to the human genome with `bowtie`
 on average. `bowtie` does not split reads, so this is considered as DNA alignment.
 
