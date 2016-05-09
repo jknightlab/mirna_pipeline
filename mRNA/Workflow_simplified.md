@@ -16,7 +16,7 @@ protocol (2x75bp). Data quality looks good, more than 10 mln reads mapped to
 known genes for each samples, average duplication rate 25%.
 
 
-| sequencing id    | sample name       | sequenced reads | mapped reads | nodup reads | uniq reads | reads mapped to genes | % reads mapped to genes of nodup |
+| sequencing id    | sample name | sequenced reads | mapped reads | nodup reads | uniq reads | reads mapped to genes | % reads mapped to genes of nodup |
 | ---------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---- |
 | WTCHG_260126_201 | miR-cont1 (Kim)    | 33,118,323 | 28,940,226 | 22,861,259 | 20,903,213 | 18,655,111 | 81.6 |
 | WTCHG_260126_202 | miR-cont2 (Jeon)   | 40,382,477 | 35,098,464 | 26,064,426 | 23,685,281 | 22,279,843 | 85.5 |
