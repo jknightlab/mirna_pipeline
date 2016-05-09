@@ -79,5 +79,9 @@ but have non-corrected p-value < 0.05.
 | ENSG00000259469.1  | RP11-227D13.4 | 7     | 26    | -0.05 | 0.047 |
 
 
+#### Gene expression in selected genes of interest
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mRNA/control_genes.png)
+
 
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
