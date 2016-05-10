@@ -84,4 +84,74 @@ but have non-corrected p-value < 0.05.
 ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mRNA/control_genes.png)
 
 
+| Gene id            | Gene name |
+| ------------------ | --------- |
+| ENSG00000111537.4  | IFNG      |
+| ENSG00000112115.5  | IL17A     |
+| ENSG00000127318.6  | IL22      |
+| ENSG00000135341.13 | MAP3K7    |
+| ENSG00000166167.13 | BTRC      |
+
+Code:
+```
+Bash:
+head -n 1 miR-10b.miR-cont.normalized_counts.txt > temp
+cat miR-10b.miR-cont.normalized_counts.txt | \
+    grep 'ENSG00000112115\|ENSG00000127318\|ENSG00000111537\|ENSG00000135341\|ENSG00000166167' >> \
+    temp
+
+R:
+data <- read.table("temp", header=TRUE)
+par(mfrow=c(2,3))
+par(mar=c(4,6,5,3))
+boxplot(
+    as.integer(data[1, seq(1,4)]),
+    as.integer(data[1, seq(5,8)]),
+    names=c("miR-10b", "miR-cont"),
+    main="IFNG", ylab="Normalized counts",
+    cex.axis=2.5, cex.lab=3.5,
+    cex.main=3.5, lwd=2)
+
+boxplot(
+    as.integer(data[2, seq(1,4)]),
+    as.integer(data[2, seq(5,8)]),
+    names=c("miR-10b", "miR-cont"),
+    main="IL17A", ylab="Normalized counts",
+    cex.axis=2.5, cex.lab=3.5,
+    cex.main=3.5, lwd=2)
+
+boxplot(
+    as.integer(data[3, seq(1,4)]),
+    as.integer(data[3, seq(5,8)]),
+    names=c("miR-10b", "miR-cont"),
+    main="IL22", ylab="Normalized counts",
+    cex.axis=2.5, cex.lab=3.5,
+    cex.main=3.5, lwd=2)
+
+boxplot(
+    as.integer(data[4, seq(1,4)]),
+    as.integer(data[4, seq(5,8)]),
+    names=c("miR-10b", "miR-cont"),
+    main="MAP3K7", ylab="Normalized counts",
+    cex.axis=2.5, cex.lab=3.5, cex.main=3.5, lwd=2)
+
+boxplot(
+    as.integer(data[5, seq(1,4)]),
+    as.integer(data[5, seq(5,8)]),
+    names=c("miR-10b", "miR-cont"),
+    main="BTRC", ylab="Normalized counts",
+    cex.axis=2.5, cex.lab=3.5,
+    cex.main=3.5, lwd=2)
+
+
+boxplot(
+    as.integer(data[6, seq(1,4)]),
+    as.integer(data[6, seq(5,8)]),
+    names=c("miR-10b", "miR-cont"),
+    main="CSF2", ylab="Normalized counts",
+    cex.axis=2.5, cex.lab=3.5,
+    cex.main=3.5, lwd=2)
+```
+
+
 #### Designed by Irina Pulyakhina irina@well.ox.ac.uk
