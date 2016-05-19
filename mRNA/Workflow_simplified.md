@@ -104,9 +104,10 @@ A couple of examples:
 
 #### Gene expression heatmap for selected genes
 
-Heatmaps showing the similarity between the samples based on certain gene expression patterns can be found here:
+Heatmaps showing the similarity between the samples based on certain gene
+expression patterns can be found
+[here](https://github.com/jknightlab/mirna_pipeline/blob/master/mRNA/gene_expression.heatmap.pdf).
 
-![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mRNA/gene_expression.heatmap.pdf)
 
 On each heatmap, one cell represents the fold change (e.g., fold change in gene
 expression in control sample1 vs miR sample1). Colors range from blue (lower
