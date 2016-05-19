@@ -91,6 +91,17 @@ findings with, e.g., qPCR. This means that when we want to get/give an idea of
 fold change between the two conditions that we sequenced, we should use
 this estimated log2FC.
 
+A couple of examples:
+
+- when manual log2FC (-0.82) is very different from the estimated log2FC (-0.09):
+  gene VEGFA -- in both conditions the gene has enough coverage, however, the
+  standard deviation of coverage in the second condition is *174* -- more than
+  half of the average coverage (292)
+- when manual logFC (-0.15) is very similar to the estimated log2FC (-0.15):
+  gene MAP2K2 -- high coverage in both conditions (1024 against 1136) plus the
+  standard deviation of coverage in both conditions is between 25 and 45, less
+  than 4% of gene expression.
+
 
 #### Gene expression in selected genes of interest
 
