@@ -79,8 +79,8 @@ but have non-corrected p-value < 0.05.
 | ENSG00000259469.1  | RP11-227D13.4 | 2    | 7    | 0.29 | -0.05 | -1.81 | 0.047 |
 
 Please note that **manual log2 fold change** can differ from
-**DESeq2 log2 fold change**. This happens because DESeq2 gives an *estimate*
-of log2 fold change and considers things like coverage per condition, average
+**DESeq2 log2 fold change**. This happens because DESeq2 gives an *estimate* of
+log2 fold change and considers things like coverage per condition, average
 coverage, standard deviation of coverage in each sample within each condition,
 overall average coverage.
 
@@ -88,20 +88,32 @@ More is written [here](http://biorxiv.org/content/early/2014/11/17/002832),
 where guys who developed DESeq2 give examples of how and why their estimated
 fold change turns to be more realistic when you start validating your RNA-Seq
 findings with, e.g., qPCR. This means that when we want to get/give an idea of
-fold change between the two conditions that we sequenced, we should use
-this estimated log2FC.
+fold change between the two conditions that we sequenced, we should use this
+estimated log2FC.
 
 A couple of examples:
 
-- when manual log2FC (-0.82) is very different from the estimated log2FC (-0.09):
-  gene VEGFA -- in both conditions the gene has enough coverage, however, the
-  standard deviation of coverage in the second condition is *174* -- more than
-  half of the average coverage (292)
+- when manual log2FC (-0.82) is very different from the estimated log2FC
+  (-0.09): gene VEGFA -- in both conditions the gene has enough coverage,
+  however, the standard deviation of coverage in the second condition is *174*
+  -- more than half of the average coverage (292)
 - when manual logFC (-0.15) is very similar to the estimated log2FC (-0.15):
   gene MAP2K2 -- high coverage in both conditions (1024 against 1136) plus the
   standard deviation of coverage in both conditions is between 25 and 45, less
   than 4% of gene expression.
 
+#### Gene expression heatmap for selected genes
+
+Heatmaps showing the similarity between the samples based on certain gene expression patterns can be found here:
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mRNA/gene_expression.heatmap.pdf)
+
+On each heatmap, one cell represents the fold change (e.g., fold change in gene
+expression in control sample1 vs miR sample1). Colors range from blue (lower
+fold changes) to yellow (higher fold changes). "ctrl" implies control samples
+("ctrl1" for control sample 1), "miR" means samples with miRNA. 25 genes were
+analyzed -- 20 genes with significant P-Values (note! q-values were not
+significant) and 5 genes of interest that are listed in the next section.
 
 #### Gene expression in selected genes of interest
 
