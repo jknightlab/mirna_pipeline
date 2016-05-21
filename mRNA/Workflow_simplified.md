@@ -116,6 +116,50 @@ fold changes) to yellow (higher fold changes). "ctrl" implies control samples
 analyzed -- 20 genes with significant P-Values (note! q-values were not
 significant) and 5 genes of interest that are listed in the next section.
 
+
+#### Pathway analysis in top 100 genes
+
+[Top 100](https://github.com/jknightlab/mirna_pipeline/blob/master/mRNA/gene_list_for_pathway_analysis.txt)
+(based on p-value) genes were selected for pathway analysis. Note that none of
+these genes passed multiple testing correction, so pathway analysis was run for
+the purpose of classification -- to see which genes are annotated to which
+functional categories. Gene Onthology analysis (a.k.a. GO terms) was performed.
+
+26 out of selected 100 genes were assigned to a pathway or a fuctional category:
+
+![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mRNA/pathway_analysis.png)
+
+These are the results of GO analysis:
+
+| mapped ids | Gene name and gene symbol | Panther family | Panther protein class |
+| ---------- | ------------------------- | -------------- | --------------------- |
+| ENSG00000145911 | "NEDD4-binding protein 3" | NEDD4-BINDING PROTEIN 3 (PTHR32274:SF1) | - |
+| ENSG00000101213 | "Protein-tyrosine kinase 6" | PROTEIN-TYROSINE KINASE 6 (PTHR24418:SF265) | "non-receptor tyrosine protein kinase non-receptor tyrosine protein kinase" |
+| ENSG00000196312 | "Hippocampus abundant transcript-like protein 2" | HIPPOCAMPUS ABUNDANT TRANSCRIPT-LIKE PROTEIN 1-RELATED (PTHR23504:SF32) | - |
+| ENSG00000181038 | "Methyltransferase-like protein 23" | METHYLTRANSFERASE-LIKE PROTEIN 23 (PTHR14614:SF2) | - |
+| ENSG00000244607 | "Coiled-coil domain-containing protein 13" | COILED-COIL DOMAIN-CONTAINING PROTEIN 13 (PTHR31935:SF1) | - |
+| ENSG00000188993 | "Leucine-rich repeat-containing protein 66" | LEUCINE-RICH REPEAT-CONTAINING PROTEIN 66 (PTHR24369:SF90) | "cytokine receptor extracellular matrix protein" |
+| ENSG00000164070 | "Heat shock 70 kDa protein 4L" | HEAT SHOCK 70 KDA PROTEIN 4L (PTHR19375:SF161) | Hsp70 family chaperone |
+| ENSG00000102302 | "FYVE, RhoGEF and PH domain-containing protein" | FYVE, RHOGEF AND PH DOMAIN-CONTAINING PROTEIN 1 (PTHR12673:SF79) | guanyl-nucleotide exchange factor |
+| ENSG00000179477 | "Arachidonate 12-lipoxygenase, 12R-type" | ARACHIDONATE 12-LIPOXYGENASE, 12R-TYPE (PTHR11771:SF40) | oxygenase |
+| ENSG00000182687 | "Galanin receptor type 2" | GALANIN RECEPTOR TYPE 2 (PTHR24230:SF13) | G-protein coupled receptor |
+| ENSG00000162368 | "UMP-CMP kinase" | UMP-CMP KINASE (PTHR23359:SF107) | "nucleotide kinase nucleotide kinase" |
+| ENSG00000258405 | "Zinc finger protein 578" | ZINC FINGER PROTEIN 578 (PTHR24407:SF16) | - |
+| ENSG00000225556 | "C2 calcium-dependent domain-containing protein 4D" | C2 CALCIUM-DEPENDENT DOMAIN-CONTAINING PROTEIN 4D (PTHR10024:SF179) | membrane trafficking regulatory protein |
+| ENSG00000135517 | "Lens fiber major intrinsic protein" | LENS FIBER MAJOR INTRINSIC PROTEIN (PTHR19139:SF39) | "transporter transfer/carrier protein" |
+| ENSG00000186767 | "Spindlin-4" | SPINDLIN-4 (PTHR10405:SF9) | - |
+| ENSG00000155980 | "Kinesin heavy chain isoform 5A" | KINESIN HEAVY CHAIN ISOFORM 5A (PTHR24115:SF317) | microtubule binding motor protein |
+| ENSG00000166920 | "Normal mucosa of esophagus-specific gene 1 protein" | NORMAL MUCOSA OF ESOPHAGUS-SPECIFIC GENE 1 PROTEIN (PTHR14256:SF3) | oxidoreductase |
+| ENSG00000138495 | "Cytochrome c oxidase copper chaperone" | CYTOCHROME C OXIDASE COPPER CHAPERONE (PTHR16719:SF0) | transfer/carrier protein |
+| ENSG00000116017 | "AT-rich interactive domain-containing protein 3A" | AT-RICH INTERACTIVE DOMAIN-CONTAINING PROTEIN 3A (PTHR15348:SF1) | "transcription factor nucleic acid binding" |
+| ENSG00000182175 | "Repulsive guidance molecule A" | REPULSIVE GUIDANCE MOLECULE A (PTHR31428:SF4) | - |
+| ENSG00000126934 | "Dual specificity mitogen-activated protein kinase kinase 2" | DUAL SPECIFICITY MITOGEN-ACTIVATED PROTEIN KINASE KINASE 2 (PTHR24361:SF314) | - |
+| ENSG00000136718 | "U3 small nucleolar ribonucleoprotein protein IMP4" | U3 SMALL NUCLEOLAR RIBONUCLEOPROTEIN PROTEIN IMP4 (PTHR22734:SF2) | ribonucleoprotein |
+| ENSG00000173535 | "Tumor necrosis factor receptor superfamily member 10C" | TUMOR NECROSIS FACTOR RECEPTOR SUPERFAMILY MEMBER 10C (PTHR23097:SF96) | tumor necrosis factor receptor |
+| ENSG00000135972 | "28S ribosomal protein S9, mitochondrial" | 28S RIBOSOMAL PROTEIN S9, MITOCHONDRIAL (PTHR21569:SF1) | - |
+| ENSG00000179604 | "Cdc42 effector protein 4" | CDC42 EFFECTOR PROTEIN 4 (PTHR15344:SF14) | - |
+| ENSG00000106333 | "Procollagen C-endopeptidase enhancer 1" | PROCOLLAGEN C-ENDOPEPTIDASE ENHANCER 1 (PTHR10127:SF628) | "transporter apolipoprotein membrane-bound signaling molecule receptor metalloprotease serine protease oxidase metalloprotease serine protease extracellular matrix protein enzyme modulator cell adhesion molecule" |
+
 #### Gene expression in selected genes of interest
 
 ![alt text](https://github.com/jknightlab/mirna_pipeline/blob/master/mRNA/control_genes.png)
